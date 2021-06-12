@@ -24,22 +24,25 @@
             <fieldset>
                 <legend>Procedencia</legend>
     
-                <p>No.Boleta:<input type="text" name="numero_de_boleta" size="40" class="input" placeholder="Ingresa tu boleta"></p>
-                <p>Nombre:<input type="text" name="nombre" size="40" class="input"></p>
-                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="40" class = "input"></p>
-                <p>Apellido Materno:<input type="text" name="apellido materno" size="40" class="input"></p>
-                <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="40 " class="input"></p>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="40" class="input" placeholder="Ingresa tu boleta"></p>
+                <p>Nombre:<input type="text" name="nombre" size="40" class="input" placeholder="Ingresa tu nombre"></p>
+                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="40" class = "input" placeholder="Ingresa tu apellido paterno"></p>
+                <p>Apellido Materno:<input type="text" name="apellido materno" size="40" class="input" placeholder="Ingresa tu apellido materno"></p>
+                <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="40 " class="input" placeholder="Ingresa curp"></p>
                 <div id="gen">
-                    <label for="genero">Genero</label>
-                    <select name="genero">
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                        <option value="Otro">Otro</option>
-                    </select>
+                    <label for="genero">Genero:</label>
+                    <div class="custom-select" style="width: 200px;">
+                        <select name="genero">
+                            <option value="" disabled selected>Selecciona tu opcion</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
                 </div>
                 <div id="nac">
                     <label for="fechanacimiento">Fecha de nacimiento</label>
-                    <input type="date" id="fechanacimiento"/>
+                    <input type="date" class="custom-date-field"/>
                 </div>
             </fieldset>
             <!-- contacto -->
@@ -63,7 +66,8 @@
             <fieldset>
                 <legend>Procedencia:</legend>
                 <label for="Escuela">Ingresa tu escuela de procedencia: </label>
-                <select name="Escuela">
+                <div class="custom-select" style="width: 250px;">
+                    <select name="Escuela">
                         <option value="cecyt1">Cecyt #1 "Gonzalo Vázquez Vela "</option>
                         <option value="cecyt2">Cecyt #2 "Miguel Bernard Perales "</option>
                         <option value="cecyt3">Cecyt #3 "Estanislao Ramirez Ruíz "</option>
@@ -86,6 +90,8 @@
                         <option value="cet1 ">CET 1 "Walter Cross Buchanan "</option>
                         <option value="otro ">Otro </option>
                     </select>
+                </div>
+                
     
                 <label for="Entidad" style="margin-left: 60px;">Ingresa tu entidad federativa de procedencia: </label>
                 <select name="Entidad">
@@ -145,6 +151,6 @@
     <!-- footer -->
     <div class="footer">
     </div>
+    <script src="/scripts/selector.js"></script>
 </body>
-
 </html>

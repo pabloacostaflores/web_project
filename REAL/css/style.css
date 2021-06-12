@@ -39,6 +39,16 @@ body{
     width:70%;
     background-color: #ffffff00;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    border: 2px solid #6C1D45;
+}
+input:autofill {
+    border: 2px solid #6C1D45;
+}
 legend {
     background-color: #6C1D45;
     color: white;
@@ -58,12 +68,106 @@ fieldset {
     border-image: initial;
     margin-bottom: 2%;
     border-radius: 50px;
+    padding-bottom: 20px;
 }
 p{
     margin-left: 30px;
     float: left;
 }
 #nac, #gen{
-    margin-top: 15px;
+    margin: 15px 0 0 30px;
     display: inline-block;
+}
+
+/*SELECT*/
+/* The container must be positioned relative: */
+.custom-select{
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #6C1D45;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #6C1D45;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*  */
+
+.custom-date-field {
+    font-family: Arial, Sans-serif;
+    padding: 8px 16px;
+    font-size: 12px;
+    margin-bottom: 30px;
+    background-color:#6C1D45;
+    border: none;
+    color: white;
+}
+
+.custom-date-field input {
+    border: none;
+    padding: 5px 10px;
+    color: white;
+}
+
+.custom-date-field span {
+    display: block;
+    font-size: 12px;
+}
+
+.custom-date-field label {
+    width: 30%;
+    display: inline-block;
+    font-size: 18px;
 }
