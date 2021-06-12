@@ -4,19 +4,66 @@ Client:
 Authors: 
 Developed @ One Month in Mexico City 
 */
-.general{
+*{
+    -moz-box-sizing: border-box; /* Firexfox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box; /* IE */
+}
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+body{
     background: linear-gradient(180deg, #6C1D45 0%, #FFFFFF 74.51%); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-    font-family: arial;
+    font-family: 'Oswald', sans-serif;
 }
 .form{
-    margin-top:5%;
+    margin-top:3%;
     width: 80%; 
-    text-align: center; 
+    text-align: left; 
     margin-left: 10%; 
     background: rgba(207, 205, 205, 0.479); 
     border-radius: 50px;
     padding: 30px;
+}
+.input{
+    padding: 4px;
+    display:block; 
+    border:none;
+    border-bottom: 2px solid #6C1D45;
+    margin-left:15px;
+    width:70%;
+    background-color: #ffffff00;
+}
+legend {
+    background-color: #6C1D45;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 5%;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    border-width: 3px;
+    border-color: #6C1D45;
+    border-image: initial;
+    margin-bottom: 2%;
+    border-radius: 50px;
+}
+p{
+    margin-left: 30px;
+    float: left;
+}
+#nac, #gen{
+    margin-top: 15px;
+    display: inline-block;
 }
