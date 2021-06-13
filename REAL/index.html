@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <!-- media queries -->
-    <link rel="stylesheet" href="css/medium.css" media="(max-width: 630px)">
-    <link rel="stylesheet" href="css/small.css" media="(max-width: 630px)">
+    <!-- <link rel="stylesheet" href="css/medium.css" media="(max-width: 630px)"> -->
+    <link rel="stylesheet" href="css/small.css" media="(max-width: 1015px)">
 </head>
 <body>
     <!-- header with buttons -->
@@ -31,7 +31,7 @@
                 <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="40 " class="input" placeholder="Ingresa curp"></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
-                    <div class="custom-select" style="width: 200px;">
+                    <div class="custom-select" id="se">
                         <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Masculino">Masculino</option>
@@ -41,19 +41,19 @@
                     </div>
                 </div>
                 <div id="nac">
-                    <label for="fechanacimiento">Fecha de nacimiento</label>
-                    <input type="date" class="custom-date-field"/>
+                    <label for="fechanacimiento">Fecha de nacimiento:</label>
+                    <input type="date" class="custom-date-field" value="Ingresa tu fecha de nacimiento"/>
                 </div>
             </fieldset>
             <!-- contacto -->
 
             <fieldset>
                 <legend>Contacto</legend>
-                <label for="calle">Calle y Número: </label>
-                <input type="text" id="calle" name="calle" size="40" />
-                <input type="text" id="colonia" name="colonia" size="10" /><br/>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="40" class="input" placeholder="Ingresa tu boleta"></p>
+                <input type="text" id="calle" name="calle" size="40px" />
+                <input type="text" id="colonia" name="colonia" size="10px" /><br/>
                 <label for="cp">Código Postal: </label>
-                <input type="number" id="colonia" name="colonia" size="20" />
+                <input type="number" id="colonia" name="colonia" size="20px" />
                 <label for="telefono" style="margin-left:100px;">Telefono y celular: </label>
                 <input type="tel" id="telefono" name="telefono " size="30" /><br/>
                 <label for="correo">Correo eléctronico: </label>
@@ -66,7 +66,7 @@
             <fieldset>
                 <legend>Procedencia:</legend>
                 <label for="Escuela">Ingresa tu escuela de procedencia: </label>
-                <div class="custom-select" style="width: 250px;">
+                <div class="custom-select" id="se">
                     <select name="Escuela">
                         <option value="cecyt1">Cecyt #1 "Gonzalo Vázquez Vela "</option>
                         <option value="cecyt2">Cecyt #2 "Miguel Bernard Perales "</option>

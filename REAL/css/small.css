@@ -1,0 +1,27 @@
+*{
+    font-size: 1.625rem;
+}
+legend{
+    font-size: 1.875rem;
+}
+fieldset p{
+    text-align: center;
+}
+p{
+    width: 100%;
+    margin-left: 0;
+    float:center;
+}
+.input{
+    margin-left: 15%;
+}
+.form{
+    width: 100%;
+    margin-left: 0;
+}
+#gen,#nac{
+    margin-left: 15%;
+}
+#se{
+    width:400px;
+}
