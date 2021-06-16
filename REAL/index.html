@@ -24,21 +24,21 @@
             <fieldset>
                 <legend>Procedencia</legend>
     
-                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="40" class="input" placeholder="Ingresa tu boleta"></p>
-                <p>Nombre:<input type="text" name="nombre" size="40" class="input" placeholder="Ingresa tu nombre"></p>
-                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="40" class = "input" placeholder="Ingresa tu apellido paterno"></p>
-                <p>Apellido Materno:<input type="text" name="apellido materno" size="40" class="input" placeholder="Ingresa tu apellido materno"></p>
-                <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="40 " class="input" placeholder="Ingresa curp"></p>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu boleta"></p>
+                <p>Nombre:<input type="text" name="nombre" size="35" class="input" placeholder="Ingresa tu nombre"></p>
+                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input" placeholder="Ingresa tu apellido paterno"></p>
+                <p>Apellido Materno:<input type="text" name="apellido materno" size="35" class="input" placeholder="Ingresa tu apellido materno"></p>
+                <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="35" class="input" placeholder="Ingresa curp"></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
-                    <div class="custom-select" id="se">
+                    <span class="custom-select" style="width: 200px;">
                         <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                             <option value="Otro">Otro</option>
                         </select>
-                    </div>
+                    </span>
                 </div>
                 <div id="nac">
                     <label for="fechanacimiento">Fecha de nacimiento:</label>
@@ -49,15 +49,50 @@
 
             <fieldset>
                 <legend>Contacto</legend>
-                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="40" class="input" placeholder="Ingresa tu boleta"></p>
-                <input type="text" id="calle" name="calle" size="40px" />
-                <input type="text" id="colonia" name="colonia" size="10px" /><br/>
-                <label for="cp">Código Postal: </label>
-                <input type="number" id="colonia" name="colonia" size="20px" />
-                <label for="telefono" style="margin-left:100px;">Telefono y celular: </label>
-                <input type="tel" id="telefono" name="telefono " size="30" /><br/>
-                <label for="correo">Correo eléctronico: </label>
-                <input type="email" id="correo" name="correo" size="30" />
+                    <p style="width: 349px;">Estado:<span class="custom-select" style="width: 200px;">
+                        <select name="genero">
+                            <option value="" disabled selected>Selecciona tu opcion</option>
+                            <option value="AGU ">Aguascalientes </option>
+                            <option value="BC ">Baja California </option>
+                            <option value="BCS ">Baja California Sur </option>
+                            <option value="CAM ">Campeche </option>
+                            <option value="CDMX ">Ciudad de México </option>
+                            <option value="COA ">Coahuila de Zaragoza </option>
+                            <option value="COM ">Colima </option>
+                            <option value="CHP ">Chiapas </option>
+                            <option value="CHH ">Chihuahua </option>
+                            <option value="DUR ">Durango </option>
+                            <option value="MEX ">Estado de México </option>
+                            <option value="GUA ">Guanajuato </option>
+                            <option value="GUE ">Guerrero </option>
+                            <option value="HID ">Hidalgo </option>
+                            <option value="JAL ">Jalisco </option>
+                            <option value="MIC ">Michoacán de Ocampo </option>
+                            <option value="MOR ">Morelos </option>
+                            <option value="NAY ">Nayarit </option>
+                            <option value="NL ">Nuevo León </option>
+                            <option value="OAX ">Oaxaca </option>
+                            <option value="PUE ">Puebla </option>
+                            <option value="QUE ">Querétaro </option>
+                            <option value="QR ">Quintana Roo </option>
+                            <option value="SLP ">San Luis Potosí </option>
+                            <option value="SIN ">Sinaloa </option>
+                            <option value="SON ">Sonora </option>
+                            <option value="TAB ">Tabasco </option>
+                            <option value="TAM ">Tamaulipas </option>
+                            <option value="noexiste ">Tlaxcala </option>
+                            <option value="VER ">Veracruz  </option>
+                            <option value="YUC ">Yucatán </option>
+                            <option value="ZAC ">Zacatecas </option>
+                        </select>
+                    </span></p>
+                <p>Delegacion/Municipio:<input type="text" name="Delegacion" size="35" class="input" placeholder="Ingresa tu Delegacion/Municipio"></p>
+                <p>Colonia:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu colonia"></p>
+                <p>Direccion de la calle:<input type="text" name="Calle" size="35" class="input" placeholder="Ingresa tu calle, numero, lt, mzn"></p>
+                <p>Codigo Postal:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu codigo postal"></p>
+                <p>Telefono de casa:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu numero de casa"></p>
+                <p>Celular:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu telefono celular"></p>
+                <p>Email:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu correo electronico"></p>
     
             </fieldset>
     
@@ -65,36 +100,37 @@
     
             <fieldset>
                 <legend>Procedencia:</legend>
-                <label for="Escuela">Ingresa tu escuela de procedencia: </label>
-                <div class="custom-select" id="se">
+                <p>Ingresa tu escuela de procedencia: 
+                <span class="custom-select" style="width: 200px;">
                     <select name="Escuela">
-                        <option value="cecyt1">Cecyt #1 "Gonzalo Vázquez Vela "</option>
-                        <option value="cecyt2">Cecyt #2 "Miguel Bernard Perales "</option>
-                        <option value="cecyt3">Cecyt #3 "Estanislao Ramirez Ruíz "</option>
-                        <option value="cecyt4">Cecyt #4 "Lázaro Cárdenas del Río "</option>
-                        <option value="cecyt5">Cecyt #5 "Benito Juárez "</option>
-                        <option value="cecyt6">Cecyt #6 "Miguel Othon de Mendizábal "</option>
-                        <option value="cecyt7">Cecyt #7 "Cuauhtémoc "</option>
-                        <option value="cecyt8">Cecyt #8 "Narciso Bassols "</option>
-                        <option value="cecyt9">Cecyt #9 "Juan de Dios Bátiz Paredes "</option>
-                        <option value="cecyt10">Cecyt #10 "Carlos Vallejo Márquez "</option>
-                        <option value="cecyt11">Cecyt #11 "Wilfrido Massieu "</option>
-                        <option value="cecyt12">Cecyt #12 "José María Morelos "</option>
-                        <option value="cecyt13">Cecyt #13 "Ricardo Flores Magón "</option>
-                        <option value="cecyt14">Cecyt #14 "Luis Enrique Erro Soler "</option>
-                        <option value="cecyt15">Cecyt #15 "Diódoro Antúnez Echegaray "</option>
-                        <option value="cecyt16">Cecyt #16 "Hidalgo "</option>
-                        <option value="cecyt17">Cecyt #17 "León, Guanajuato "</option>
-                        <option value="cecyt18">Cecyt #18 "Zacatecas "</option>
-                        <option value="cecyt19">Cecyt #19 "Leona Vicario "</option>
-                        <option value="cet1 ">CET 1 "Walter Cross Buchanan "</option>
+                        <option value="" disabled selected>Selecciona tu opcion</option>
+                        <option value="cecyt1">Cecyt #1 "Gonzalo Vázquez Vela"</option>
+                        <option value="cecyt2">Cecyt #2 "Miguel Bernard Perales"</option>
+                        <option value="cecyt3">Cecyt #3 "Estanislao Ramirez Ruíz"</option>
+                        <option value="cecyt4">Cecyt #4 "Lázaro Cárdenas del Río"</option>
+                        <option value="cecyt5">Cecyt #5 "Benito Juárez"</option>
+                        <option value="cecyt6">Cecyt #6 "Miguel Othon de Mendizábal"</option>
+                        <option value="cecyt7">Cecyt #7 "Cuauhtémoc"</option>
+                        <option value="cecyt8">Cecyt #8 "Narciso Bassols"</option>
+                        <option value="cecyt9">Cecyt #9 "Juan de Dios Bátiz Paredes"</option>
+                        <option value="cecyt10">Cecyt #10 "Carlos Vallejo Márquez"</option>
+                        <option value="cecyt11">Cecyt #11 "Wilfrido Massieu"</option>
+                        <option value="cecyt12">Cecyt #12 "José María Morelos"</option>
+                        <option value="cecyt13">Cecyt #13 "Ricardo Flores Magón"</option>
+                        <option value="cecyt14">Cecyt #14 "Luis Enrique Erro Soler"</option>
+                        <option value="cecyt15">Cecyt #15 "Diódoro Antúnez Echegaray"</option>
+                        <option value="cecyt16">Cecyt #16 "Hidalgo"</option>
+                        <option value="cecyt17">Cecyt #17 "León, Guanajuato"</option>
+                        <option value="cecyt18">Cecyt #18 "Zacatecas"</option>
+                        <option value="cecyt19">Cecyt #19 "Leona Vicario"</option>
+                        <option value="cet1 ">CET 1 "Walter Cross Buchanan"</option>
                         <option value="otro ">Otro </option>
                     </select>
-                </div>
-                
-    
-                <label for="Entidad" style="margin-left: 60px;">Ingresa tu entidad federativa de procedencia: </label>
-                <select name="Entidad">
+                </span></p>
+
+                <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" style="width: 200px;">
+                    <select name="genero">
+                        <option value="" disabled selected>Selecciona tu opcion</option>
                         <option value="AGU ">Aguascalientes </option>
                         <option value="BC ">Baja California </option>
                         <option value="BCS ">Baja California Sur </option>
@@ -128,28 +164,40 @@
                         <option value="YUC ">Yucatán </option>
                         <option value="ZAC ">Zacatecas </option>
                     </select>
-                <br/>
-                <label for="Promedio"> Promedio: </label>
-                <input type="number" id="Promedio" name="Promedio" />
-                <label for="Opcion" style="margin-left:305px"> ESCOM fue tu: </label>
-                <select name="Opcion">
-                            <option value="primera">1ra Opción </option>
-                            <option value="segunda">2da Opción </option>
-                            <option value="tercera">3ra Opción </option>
-                            <option value="cuarta">4ta Opción </option>
-                    </select>
+                </span></p>
+                
+                <p> Promedio: 
+                <input type="number"  id="prom" name="Promedio" min="1" max="10" value="1" step="0.01"/></p>
+                <div id="gen">
+                    <label for="genero">Escom fue tu:</label>
+                    <span class="custom-select" style="width: 200px;">
+                        <select name="genero">
+                            <option value="" disabled selected>Selecciona tu opcion</option>
+                            <option value="1Opcion">1ra Opción</option>
+                            <option value="2Opcion">2da Opción</option>
+                            <option value="3Opcion">3er Opción</option>
+                            <option value="4Opcion">4ta Opción</option>
+                            
+                        </select>
+                    </span>
+                </div>
     
             </fieldset>
     
             <!-- Botones -->
-            <br/>
-            <input type="reset" value="Limpiar" /><br/>
-            <input type="button" value="Enviar" onclick="alert('Gracias! Tus datos fueron guardados correctamente') " /><br/>
+            <div class="button">
+                <a href="" class="jsbutton">Enviar</a>
+            </div>
+            <div class="button" style="margin-left: 70%;">
+                <a href="" class="jsbutton">Limpiar</a>
+            </div>
+            <div class="clearfix"></div>
         </form>
         <!-- form global -->
     </div>
     <!-- footer -->
     <div class="footer">
+        
     </div>
     <script src="/scripts/selector.js"></script>
 </body>

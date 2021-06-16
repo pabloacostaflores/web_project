@@ -8,11 +8,12 @@ Developed @ One Month in Mexico City
     -moz-box-sizing: border-box; /* Firexfox */
     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
     box-sizing: border-box; /* IE */
+    text-decoration: none;
 }
 .clearfix:after {
-content: "";
-display: table;
-clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 body{
     background: linear-gradient(180deg, #6C1D45 0%, #FFFFFF 74.51%); 
@@ -22,10 +23,9 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .form{
-    margin-top:3%;
+    margin:5% 0 5% 10%;
     width: 80%; 
     text-align: left; 
-    margin-left: 10%; 
     background: rgba(207, 205, 205, 0.479); 
     border-radius: 3.125rem;
     padding: 1.875rem;
@@ -36,9 +36,10 @@ body{
     border:none;
     border-bottom: 0.125rem solid #6C1D45;
     margin-left:0.9375rem;
-    width:70%;
+    width:90%;
     background-color: #ffffff00;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -176,6 +177,47 @@ p{
     display: inline-block;
     font-size: 1rem;
 }
-#se{
-    width:200px;
+.button{
+    background-color: #6c1d45;
+    margin-bottom: 20px;
+	width: 60px;
+    height: 20px;
+	text-align: center;
+	margin-left: 10%;
+	border-radius: 15px;
+    float: left;
+}
+a{
+    color: #fff;
+}
+#prom{
+    font-family: Arial, Sans-serif;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    /* margin: 0 0 1.875rem 1.25rem; */
+    background-color:#6C1D45;
+    border: none;
+    color: white;
+    border-radius: 50px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.footer{
+    width: 100%;
+    background-color: #6C1D45;
+    height: 100px;
+}
+.header{
+    width: 100%;
+    background-color: #6C1D45;
+    height: 100px;
 }
