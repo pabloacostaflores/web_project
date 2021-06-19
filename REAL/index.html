@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="css/medium.css" media="(max-width: 630px)"> -->
     <link rel="stylesheet" href="css/small.css" media="(max-width: 1015px)">
 </head>
-<body>
+<body style="position: absolute;">
     <!-- header with buttons -->
     <div class="header">
         <span class="logo">
@@ -26,20 +26,21 @@
         <span class="logo btnStudent">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
             width="260px" height="108" viewBox="0 0 140 110" style="position:absolute">
-            <polygon id="poliStudent" class="js-lstudent" points="50,0 0,100 150,100 200,0 " fill="white" />
+            <polygon id="poliStudent" class="js-lstudent" points="50,0 0,100 150,100 200,0 " fill="rgba(207, 205, 205, 0.795)" />
             </svg>
             <a href="#" class="js-student"><img src="resources/img/student.png" alt="alumno-logo" id="logoimg1"></a>
         </span>
         <span class="logo btnAdmin">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
             width="260" height="108" viewBox="0 0 140 110" style="position:absolute">
-            <polygon id="poliAdmin" points="50,0 0,100 150,100 200,0 " fill="white"/>
+            <polygon id="poliAdmin" points="50,0 0,100 150,100 200,0 " fill="rgba(207, 205, 205, 0.795)"/>
             </svg>
             <a href="#" class="js-admin"><img src="resources/img/admin.png" alt="admin-logo" class="logoimg"></a>
         </span>
     </div>
     <!-- form -->
-    <div class="form">
+    <div id="particles-js" class="fondoForm"></div>
+    <div class="form" style="position: relative;">
         <form>
             <!-- identidad -->
             <fieldset>
@@ -209,9 +210,12 @@
     </div>
     <!-- footer -->
     <div class="footer">
-
     </div>
     <script src="scripts/selector.js"></script>
     <script src="scripts/buttons.js"></script>
+    <!-- particles -->
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
+
 </html>
