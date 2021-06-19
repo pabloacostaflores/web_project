@@ -13,7 +13,7 @@
     <!-- media queries -->
     <!-- <link rel="stylesheet" href="css/medium.css" media="(max-width: 630px)"> -->
    
-    <link rel="shortcut icon" href="burrita.jpg">
+    <link rel="shortcut icon" href="resources/img/burrita.jpg">
 </head>
 
 <body>
@@ -31,17 +31,18 @@
             width="260px" height="108" viewBox="0 0 140 110" style="position:absolute">
             <polygon id="poliStudent" class="js-lstudent" points="50,0 0,100 150,100 200,0 " fill="white" />
             </svg>
-            <a href="#" class="js-student"><img src="resources/img/student.png" alt="alumno-logo" id="logoimg1"></a>
+            <a href="index.html" class="js-student"><img src="resources/img/student.png" alt="alumno-logo" id="logoimg1"></a>
         </span>
         <span class="logo btnAdmin">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
             width="260" height="108" viewBox="0 0 140 110" style="position:absolute">
-            <polygon id="poliAdmin" points="50,0 0,100 150,100 200,0 " fill="white"/>
+            <polygon id="poliAdmin" points="50,0 0,100 150,100 200,0 " fill="#6C1D45"/>
             </svg>
             <a href="#" class="js-admin"><img src="resources/img/admin.png" alt="admin-logo" class="logoimg"></a>
         </span>
     </div>
     <!-- form -->
+    <div id="particles-js" class="fondoForm"></div>
     <div class="form">
         <form method="POST" action="login.php">
             <!-- identidad -->
@@ -57,6 +58,9 @@
 
 
         </form>
+        <!-- particles -->
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
