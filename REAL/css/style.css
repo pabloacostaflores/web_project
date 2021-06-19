@@ -264,3 +264,18 @@ input[type=number] {
 canvas{
     height: auto;
 }
+/*Clases del login.html */
+.Espacio{
+    box-sizing: content-box;
+    width: 98%;
+}
+
+.input-admin{
+    padding: 0.5rem;
+    display:inline; 
+    border:none;
+    border-bottom: 0.125rem solid #6C1D45;
+    margin: 1rem 1rem;
+    width:98%;
+    background-color: #ffffff00;
+}
