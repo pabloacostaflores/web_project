@@ -9,6 +9,7 @@ Developed @ One Month in Mexico City
     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
     box-sizing: border-box; /* IE */
     text-decoration: none;
+    transition: 1s ease-in-out;
 }
 .clearfix:after {
     content: "";
@@ -177,16 +178,6 @@ p{
     display: inline-block;
     font-size: 1rem;
 }
-.button{
-    background-color: #6c1d45;
-    margin-bottom: 20px;
-	width: 60px;
-    height: 20px;
-	text-align: center;
-	margin-left: 10%;
-	border-radius: 15px;
-    float: left;
-}
 a{
     color: #fff;
 }
@@ -220,4 +211,48 @@ input[type=number] {
     width: 100%;
     background-color: #6C1D45;
     height: 100px;
+}
+.logoimg{
+    width: 100px;
+    margin-left: 110px;
+    position: relative;
+}
+.logo{
+    width: 300px;
+    margin-left: -50px;
+}
+.logou{
+    width: 300px;
+    margin-left: 20px;
+}
+.logouser{
+    width: 60px;
+    margin-left: 135px;
+    position: relative;
+    padding-bottom: 30px;
+}
+#logoimg1{
+    width: 100px;
+    margin-left: 100px;
+    position: relative;
+    margin-right: 10px;
+}
+.btnAdmin:hover  #poliAdmin{
+    fill: #9b3467c9;
+}
+.btnStudent:hover  #poliStudent{
+    fill: #9b3467c9;
+}
+.btnMain{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6C1D45;
+    border-radius: 30px;
+    color: #FFFFFF;
+    transition: 0.6s ease-in;
+}
+.btnMain:hover{
+    box-shadow: 5px 10px 30px #9629609b;
 }
