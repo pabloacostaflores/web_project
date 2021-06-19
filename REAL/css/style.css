@@ -262,5 +262,6 @@ input[type=number] {
     width: 100%;
 }
 canvas{
-    height: auto;
+    position:fixed;
+    z-index: -998;
 }

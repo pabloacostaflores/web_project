@@ -131,13 +131,3 @@ particlesJS('particles-js',
   }
 
 );
-
-function fitsize(){
-  var backgroundForm = document.querySelector("#particles-js");
-  var divForm = document.querySelector(".form");
-  console.log(backgroundForm);
-  console.log(divForm);
-  backgroundForm.style.height = divForm.style.height;
-}
-
-window.addEventListener('resize', fitsize) ;
