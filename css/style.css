@@ -48,10 +48,10 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
     transition: background-color 5000s;
-    border: 0.125rem solid #6C1D45;
+    /* border: 0.125rem solid #6C1D45; */
 }
 input:autofill {
-    border: 0.125rem solid #6C1D45;
+    /* border: 0.125rem solid #6C1D45; */
 }
 legend {
     background-color: #6C1D45;
