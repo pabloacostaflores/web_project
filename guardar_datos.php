@@ -8,17 +8,17 @@
 	$genero =$_GET["genero"];
 	$fecha_nacimiento =$_GET["bday"];
 	$estado =$_GET["estado"];
-	$delegacion =$_GET["Delegacion"];
-	$calle =$_GET["Calle"];
+	$delegacion =$_GET["delegacion"];
+	$calle =$_GET["calle"];
 	$colonia =$_GET["colonia"];
 	$codigoP =$_GET["cp"];
 	$tele_casa =$_GET["tel_casa"];
 	$num_telefono =$_GET["celular"];
 	$correo =$_GET["correo"];
-	$escuela =$_GET["Escuela"];
+	$escuela =$_GET["escuela"];
 	$entidad =$_GET["entidad_pro"];
-	$promedio =$_GET["Promedio"];
-	$opcion =$_GET["Opcion"];
+	$promedio =$_GET["promedio"];
+	$opcion =$_GET["opcion"];
 
 
 
