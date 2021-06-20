@@ -49,7 +49,7 @@
                 <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu boleta"></p>
                 <p>Nombre:<input type="text" name="nombre" size="35" class="input" placeholder="Ingresa tu nombre"></p>
                 <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input" placeholder="Ingresa tu apellido paterno"></p>
-                <p>Apellido Materno:<input type="text" name="apellido materno" size="35" class="input" placeholder="Ingresa tu apellido materno"></p>
+                <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input" placeholder="Ingresa tu apellido materno"></p>
                 <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="35" class="input" placeholder="Ingresa curp"></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
@@ -64,7 +64,7 @@
                 </div>
                 <div id="nac">
                     <label for="fechanacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="custom-date-field" value="Ingresa tu fecha de nacimiento"/>
+                    <input type="date" name="bday" class="custom-date-field" value="Ingresa tu fecha de nacimiento"/>
                 </div>
             </fieldset>
             <!-- contacto -->
@@ -72,7 +72,7 @@
             <fieldset>
                 <legend>Contacto</legend>
                     <p id="estadop">Estado:<span class="custom-select" >
-                        <select name="genero">
+                        <select name="estado">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
@@ -108,9 +108,9 @@
                             <option value="Zacatecas">Zacatecas</option>
                         </select>
                     </span></p>
-                    <p>Delegacion/Municipio:<input type="text" name="Delegacion" size="35" class="input" placeholder="Ingresa tu Delegacion/Municipio"></p>
+                    <p>Delegacion/Municipio:<input type="text" name="delegacion" size="35" class="input" placeholder="Ingresa tu Delegacion/Municipio"></p>
                     <p>Colonia:<input type="text" name="colonia" size="35" class="input" placeholder="Ingresa tu colonia"></p>
-                    <p>Direccion de la calle:<input type="text" name="Calle" size="35" class="input" placeholder="Ingresa tu calle, numero, lt, mzn"></p>
+                    <p>Direccion de la calle:<input type="text" name="calle" size="35" class="input" placeholder="Ingresa tu calle, numero, lt, mzn"></p>
                     <p>Codigo Postal:<input type="text" name="cp" size="35" class="input" placeholder="Ingresa tu codigo postal"></p>
                     <p>Telefono de casa:<input type="text" name="tel_casa" size="35" class="input" placeholder="Ingresa tu numero de casa"></p>
                     <p>Celular:<input type="text" name="celular" size="35" class="input" placeholder="Ingresa tu telefono celular"></p>
@@ -124,7 +124,7 @@
                 <legend>Procedencia:</legend>
                 <p>Ingresa tu escuela de procedencia:
                 <span class="custom-select" >
-                    <select name="Escuela">
+                    <select name="escuela">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                         <option value="Cecyt #1 Gonzalo Vázquez Vela">Cecyt #1 "Gonzalo Vázquez Vela"</option>
                         <option value="Cecyt #2 Miguel Bernard Perales">Cecyt #2 "Miguel Bernard Perales"</option>
@@ -151,7 +151,7 @@
                 </span></p>
 
                 <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" >
-                    <select name="genero">
+                    <select name="entidad_pro">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
@@ -189,11 +189,11 @@
                 </span></p>
 
                 <p> Promedio:
-                <input type="number"  id="prom" name="Promedio" min="1" max="10" value="1" step="0.01"/></p>
+                <input type="number"  id="prom" name="promedio" min="1" max="10" value="1" step="0.01"/></p>
                 <div id="gen">
                     <label for="genero">Escom fue tu:</label>
                     <span class="custom-select" >
-                        <select name="genero">
+                        <select name="opcion">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="1Opcion">1ra Opción</option>
                             <option value="2Opcion">2da Opción</option>
