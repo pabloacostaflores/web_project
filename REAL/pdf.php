@@ -9,8 +9,8 @@
         function Header()
         {
             // Logo
-            $this->Image('./logos/logo_IPN.png',10,8,30);
-			$this->Image('./logos/logoESCOM.png',170,9,30);
+            $this->Image('./resources/img/logo_IPN.png',10,8,30);
+			$this->Image('.resources/img/logoESCOM.png',170,9,30);
 			$this->SetFont('Arial','B',20);
 			$this->Cell(0,10,'ESCOM',0,1,'C');
 			$this->Cell(0,10,'DEPARTAMENTO DE CB ',0,1,'C');
