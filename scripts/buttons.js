@@ -31,7 +31,7 @@ function validarEmail(valor) {
 }
 
 function f(){
-    // location.reload();
+    location.reload();
 }
 function en(){
 

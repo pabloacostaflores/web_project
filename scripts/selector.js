@@ -12,8 +12,11 @@ for (i = 0; i < l; i++) {
     x[i].appendChild(a);
     /*for each element, create a new DIV that will contain the option list:*/
     b = document.createElement("DIV");
+    console.log(selElmnt.getAttribute('content'));
+    let name = selElmnt.getAttribute('content');
     b.setAttribute("class", "select-items select-hide");
     for (j = 1; j < ll; j++) {
+        console.log(name);
         /*for each option in the original select element,
         create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
@@ -30,6 +33,7 @@ for (i = 0; i < l; i++) {
                     s.selectedIndex = i;
                     h.innerHTML = this.innerHTML;
                     h.setAttribute('value',this.innerHTML);
+                    h.setAttribute('name', name);
                     y = this.parentNode.getElementsByClassName("same-as-selected");
                     yl = y.length;
                     for (k = 0; k < yl; k++) {
