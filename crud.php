@@ -1,3 +1,4 @@
+
 <?php
 $dbhost = "localhost";
 $dbuser = "root";
@@ -89,7 +90,6 @@ if (!$conn)
 <br>             
    <button class="btnMain Espacio" style="float:center;" type="submit">Consultar</button>
    <br>                <button class="btnMain Espacio" style="float:center;" type="submit">Consultar Todos</button>
-   <br>                <button class="btnMain Espacio" style="float:center;" type="submit">Limpiar</button>
 </form>
 </fieldset>
 <br>
@@ -123,29 +123,147 @@ if (!$conn)
 </tr>
 <tr>
     <?php $Boleta=$_POST['boleta'];
-    $query = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta."'");
-    $datos=mysqli_fetch_array($query);?>
-
+    $query = mysqli_query($conn,"SELECT * FROM datos ");
+    $datos=mysqli_fetch_array($query);    
     
-    <td><?php echo $datos['Boleta'] ?></td>
-    <td><?php echo $datos['Nombre'] ?></td>
-    <td><?php echo $datos['ApellidoP'] ?></td>
-    <td><?php echo $datos['ApellidoM'] ?></td>
-    <td><?php echo $datos['CURP'] ?></td>
-    <td><?php echo $datos['Genero'] ?></td>
-    <td><?php echo $datos['fechanacimiento'] ?></td>
-    <td><?php echo $datos['Estado'] ?></td>
-    <td><?php echo $datos['Del'] ?></td>
-    <td><?php echo $datos['Col'] ?></td>
-    <td><?php echo $datos['Dir'] ?></td>
-    <td><?php echo $datos['Cp'] ?></td>
-    <td><?php echo $datos['Tel'] ?></td>
-    <td><?php echo $datos['Cel'] ?></td>
-    <td><?php echo $datos['Email'] ?></td>
-    <td><?php echo $datos['Escuelaproc'] ?></td>
-    <td><?php echo $datos['EntidadProc'] ?></td>
-    <td><?php echo $datos['Promedio'] ?></td>
-    <td><?php echo $datos['Opcion'] ?></td>
+
+    ?>
+
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Boleta'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Nombre'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['ApellidoP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['ApellidoM'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['CURP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Genero'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['fechanacimiento'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Estado'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Del'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Col'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Dir'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos!=null){
+        echo $datos['Cp'] ;
+    }else{
+        echo "";
+    }
+    
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Tel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Cel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Email'] ;
+    }else{
+        echo "";
+    }
+    
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Escuelaproc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['EntidadProc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Promedio'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos!=null){
+        echo $datos['Opcion'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
   
 </tr>
 
