@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- media queries -->
-    <!-- <link rel="stylesheet" href="css/medium.css" media="(max-width: 630px)"> -->
-    <link rel="stylesheet" href="css/small.css" media="(max-width: 1015px)">
+    <link rel="stylesheet" href="css/small.css" media="(max-width: 1000px)">
     <link rel="shortcut icon" href="resources/img/burrita.jpg">
 </head>
 <body>
@@ -54,7 +53,7 @@
                 <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="35" class="input" placeholder="Ingresa curp"></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
-                    <span class="custom-select" style="width: 200px;">
+                    <span class="custom-select" >
                         <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Masculino">Masculino</option>
@@ -72,7 +71,7 @@
 
             <fieldset>
                 <legend>Contacto</legend>
-                    <p style="width: 349px;">Estado:<span class="custom-select" style="width: 200px;">
+                    <p id="estadop">Estado:<span class="custom-select" >
                         <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="AGU ">Aguascalientes </option>
@@ -124,7 +123,7 @@
             <fieldset>
                 <legend>Procedencia:</legend>
                 <p>Ingresa tu escuela de procedencia: 
-                <span class="custom-select" style="width: 200px;">
+                <span class="custom-select" >
                     <select name="Escuela">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                         <option value="cecyt1">Cecyt #1 "Gonzalo Vázquez Vela"</option>
@@ -151,7 +150,7 @@
                     </select>
                 </span></p>
 
-                <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" style="width: 200px;">
+                <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" >
                     <select name="genero">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                         <option value="AGU ">Aguascalientes </option>
@@ -193,7 +192,7 @@
                 <input type="number"  id="prom" name="Promedio" min="1" max="10" value="1" step="0.01"/></p>
                 <div id="gen">
                     <label for="genero">Escom fue tu:</label>
-                    <span class="custom-select" style="width: 200px;">
+                    <span class="custom-select" >
                         <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="1Opcion">1ra Opción</option>
