@@ -28,4 +28,40 @@
 	$sql = "INSERT INTO STUDENTS ".$sql_1." VALUES ".$sql_2;
 	
 	mysqli_query($conexion, $sql);
+
+	$Horario = new DateTime('2021-06-22 10:00:00');
+	$intervalo = new DateInterval('PT1H45M');
+	
+	$res = mysqli_query($conexion, "SELECT * FROM TIMETABLE");
+	$numfilas = mysqli_num_rows($res);
+	echo $numfilas;
+	$salir =false;
+	
+	for ($j = 1; $j <= 5; $j++) {
+		for ($i = 1; $i <= 6; $i++) {
+			$grupo= "LAB".$j.$i;
+			$res_2 = mysqli_query($conexion, "SELECT * FROM TIMETABLE WHERE laboratory = '".$grupo."'");
+			$filas_grupo = mysqli_num_rows($res_2);
+			echo $grupo;
+			echo $filas_grupo;
+			echo "</br>";
+			if($filas_grupo <25){
+				echo "salimos del for";
+				$salir =true;
+				break;			
+			}
+		}
+		if($salir){
+			echo "salimos del 2for";
+		break;			
+		}
+	$Horario->add($intervalo);
+	}
+	
+	$string_horario = $Horario->format('Y-m-d H:i:s');
+	
+	$sql_21= "(student_id, laboratory, horary)";
+	$sql_22= "('$Num_Boleta', '$grupo', '$string_horario')";
+	$sql_2 = "INSERT INTO TIMETABLE ".$sql_21." VALUES ".$sql_22;
+	mysqli_query($conexion, $sql_2);
 ?>
