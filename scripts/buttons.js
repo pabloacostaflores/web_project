@@ -45,9 +45,9 @@ function en(){
     obj.apMaterno = document.querySelector(".js-apMaterno").value;
     obj.curp = document.querySelector(".js-curp").value;
     console.log(obj.curp);
-    if(!curpValida(obj.curp)){
+    if(!curpValida(toString(obj.curp))){
         document.querySelector(".js-curp").classList.add("wrong");
-        break;
+        return;
     }else{
         document.querySelector(".js-curp").classList.add("correct");
     }
