@@ -9,6 +9,7 @@ if (!$conn)
 {
     die("No hay conexion: ".mysqli_connect_error());
 }
+$aux=0;
 ?>
 <!DOCTYPE html>
 <html lang="sp">
@@ -88,8 +89,8 @@ if (!$conn)
 <form method="POST" action="">
                 <label for="pass">Matricula:</label> <input type="text" name="boleta" size="35" class="input-admin" placeholder="Ingresa la matricula">
 <br>             
-   <button class="btnMain Espacio" style="float:center;" type="submit">Consultar</button>
-   <br>                <button class="btnMain Espacio" style="float:center;" type="submit">Consultar Todos</button>
+   <button class="btnMain Espacio" style="float:center;" type="submit" >Consultar</button>
+   <br>                <button class="btnMain Espacio" style="float:center;" type="submit" formaction="consulta.php#consulta">Consultar Todos</button>
 </form>
 </fieldset>
 <br>
@@ -97,6 +98,7 @@ if (!$conn)
     <legend class="Tabla-Legend centrar-texto">Resultado</legend>
     <br>
 <br>
+
     <table class="tabla">
         <colgroup span="4" class="columns"></colgroup>
         <tr>
@@ -123,19 +125,20 @@ if (!$conn)
 </tr>
 <tr>
     <?php $Boleta=$_POST['boleta'];
-    $query = mysqli_query($conn,"SELECT * FROM datos ");
-    $datos=mysqli_fetch_array($query);    
+    $query = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta."'");
+    $datos=mysqli_fetch_array($query);   
     
 
     ?>
 
-    <td><?php 
+    <td>
+    <?php
     if($datos!=null){
         echo $datos['Boleta'] ;
     }else{
         echo "";
     }
-    ?></td>
+    ?>
     <td><?php 
     if($datos!=null){
         echo $datos['Nombre'] ;
@@ -263,7 +266,8 @@ if (!$conn)
     }else{
         echo "";
     }
-    ?></td>
+?>
+</td>
   
 </tr>
 
@@ -277,6 +281,7 @@ if (!$conn)
       </div>
     </div>
     </div>
+</div>
 </div>
 <!--Eliminar-->
 
@@ -295,10 +300,19 @@ if (!$conn)
 <br>
 
 <form method="POST" action="">
-            <label for="pass">Matricula:</label> <input type="password" name="boleta1" size="35" class="input-admin" placeholder="Ingresa la matricula">
+            <label for="pass">Matricula:</label> <input type="text" name="boleta1" size="35" class="input-admin" placeholder="Ingresa la matricula">
 <br>             
 <button class="btnMain Espacio" style="float:center;" type="submit">Buscar</button>
-<br>                <button class="btnMain Espacio" style="float:center;" type="submit">Eliminar</button>
+<br>                <button class="btnMain Espacio" style="float:center;" type="submit" onclick="Saber()">Eliminar </button>
+
+<script>
+    function Saber(){
+        
+        <?php $aux=1?>
+       
+    }
+   
+</script>
 
 </form>
 </fieldset>
@@ -334,31 +348,151 @@ if (!$conn)
 <tr>
 <tr>
     <?php $Boleta1=$_POST['boleta1'];
-    $query = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta1."'");
-    $datos=mysqli_fetch_array($query);?>
+    $query1 = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta1."'");
+    $datos1=mysqli_fetch_array($query1);   
+    if($aux=1){
+     
+        $query2 = mysqli_query($conn,"DELETE FROM datos WHERE Boleta = '".$Boleta1."'");
+       
+    }
+    ?>
 
+    <td>
+    <?php
+    if($datos1!=null){
+        echo $datos1['Boleta'] ;
+    }else{
+        echo "";
+    }
+    ?>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Nombre'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['ApellidoP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['ApellidoM'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['CURP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Genero'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['fechanacimiento'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Estado'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Del'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Col'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Dir'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos1!=null){
+        echo $datos1['Cp'] ;
+    }else{
+        echo "";
+    }
     
-    <td><?php echo $datos['Boleta'] ?></td>
-    <td><?php echo $datos['Nombre'] ?></td>
-    <td><?php echo $datos['ApellidoP'] ?></td>
-    <td><?php echo $datos['ApellidoM'] ?></td>
-    <td><?php echo $datos['CURP'] ?></td>
-    <td><?php echo $datos['Genero'] ?></td>
-    <td><?php echo $datos['fechanacimiento'] ?></td>
-    <td><?php echo $datos['Estado'] ?></td>
-    <td><?php echo $datos['Del'] ?></td>
-    <td><?php echo $datos['Col'] ?></td>
-    <td><?php echo $datos['Dir'] ?></td>
-    <td><?php echo $datos['Cp'] ?></td>
-    <td><?php echo $datos['Tel'] ?></td>
-    <td><?php echo $datos['Cel'] ?></td>
-    <td><?php echo $datos['Email'] ?></td>
-    <td><?php echo $datos['Escuelaproc'] ?></td>
-    <td><?php echo $datos['EntidadProc'] ?></td>
-    <td><?php echo $datos['Promedio'] ?></td>
-    <td><?php echo $datos['Opcion'] ?></td>
-</tr>
-
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Tel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Cel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Email'] ;
+    }else{
+        echo "";
+    }
+    
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Escuelaproc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['EntidadProc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Promedio'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos1!=null){
+        echo $datos1['Opcion'] ;
+    }else{
+        echo "";
+    }
+?></td>
    
     
 </table>
@@ -386,11 +520,10 @@ if (!$conn)
 <br>
 
 <form method="POST" action="">
-            <label for="pass">Matricula:</label> <input type="password" name="boleta2" size="35" class="input-admin" placeholder="Ingresa la matricula">
+            <label for="pass">Matricula:</label> <input name="boleta2" size="35" class="input-admin" placeholder="Ingresa la matricula">
 <br>             
 <button class="btnMain Espacio" style="float:center;" type="submit">Buscar</button>
-<br>                <button class="btnMain Espacio" style="float:center;" type="submit">Modificar</button>
-<br>                <button class="btnMain Espacio" style="float:center;" type="submit">Guardar</button>
+<br>               
 </form>
 </fieldset>
 <br>
@@ -425,37 +558,159 @@ if (!$conn)
 <tr>
 <tr>
     <?php $Boleta2=$_POST['boleta2'];
-    $query = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta2."'");
-    $datos=mysqli_fetch_array($query);?>
-
+    $query2 = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta2."'");
+    $datos2=mysqli_fetch_array($query2);   
     
-    <td><?php echo $datos['Boleta'] ?></td>
-    <td><?php echo $datos['Nombre'] ?></td>
-    <td><?php echo $datos['ApellidoP'] ?></td>
-    <td><?php echo $datos['ApellidoM'] ?></td>
-    <td><?php echo $datos['CURP'] ?></td>
-    <td><?php echo $datos['Genero'] ?></td>
-    <td><?php echo $datos['fechanacimiento'] ?></td>
-    <td><?php echo $datos['Estado'] ?></td>
-    <td><?php echo $datos['Del'] ?></td>
-    <td><?php echo $datos['Col'] ?></td>
-    <td><?php echo $datos['Dir'] ?></td>
-    <td><?php echo $datos['Cp'] ?></td>
-    <td><?php echo $datos['Tel'] ?></td>
-    <td><?php echo $datos['Cel'] ?></td>
-    <td><?php echo $datos['Email'] ?></td>
-    <td><?php echo $datos['Escuelaproc'] ?></td>
-    <td><?php echo $datos['EntidadProc'] ?></td>
-    <td><?php echo $datos['Promedio'] ?></td>
-    <td><?php echo $datos['Opcion'] ?></td>
-</tr>
+
+    ?>
+
+    <td>
+    <?php
+    if($datos2!=null){
+        echo $datos2['Boleta'] ;
+    }else{
+        echo "";
+    }
+    ?>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Nombre'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['ApellidoP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['ApellidoM'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['CURP'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Genero'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['fechanacimiento'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Estado'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Del'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Col'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Dir'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+    <td><?php 
+    if($datos2!=null){
+        echo $datos2['Cp'] ;
+    }else{
+        echo "";
+    }
+    
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Tel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Cel'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Email'] ;
+    }else{
+        echo "";
+    }
+    
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Escuelaproc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['EntidadProc'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Promedio'] ;
+    }else{
+        echo "";
+    }
+    ?></td>
+        <td><?php 
+    if($datos2!=null){
+        echo $datos2['Opcion'] ;
+    }else{
+        echo "";
+    }
+?></td>
 
    
     
 </table>
+
+
 <br><br><br>
 
 <div id="consulta" class="menu-cerrar">
+<a href="modificar.php?Boleta2=<?php echo $Boleta2?>" class="bt d-block">Modificar</a>
+<br>
 <a href="" class="bt  d-block ">Cerrar</a>
   </div>
 </div>

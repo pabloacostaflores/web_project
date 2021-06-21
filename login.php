@@ -19,7 +19,7 @@ $query = mysqli_query($conn,"SELECT * FROM admins WHERE Usuario = '".$usuario."'
 $numero_fila = mysqli_num_rows($query);
 
 if ($numero_fila == 1){
-    header("Location: crud.html");
+    header("Location: crud.php");
     
 }
 else if ($numero_fila == 0){
