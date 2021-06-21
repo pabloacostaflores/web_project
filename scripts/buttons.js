@@ -37,7 +37,7 @@ function f(){
 console.log("Hola mundo");
 function en(){
     // para select no clase sino id
-    console.log("Hola mundo2");
+    alert("Tus datos son correctos?");
     var obj = new Object();
     obj.bol = document.querySelector(".js-boleta").value;
     obj.nombre = document.querySelector(".js-nombre").value;
@@ -62,6 +62,8 @@ function en(){
 
     // if(exito)alert("Datos enviados con exito!");
     // else alert("Hubo un error en el sistema.");
+    alert("Te hemos enviado a tu correo el pdf de tu inscripcion");
+    
 }
 function st(){
     var x = document.querySelector(".js-lstudent");
