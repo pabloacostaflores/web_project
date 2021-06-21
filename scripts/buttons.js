@@ -30,26 +30,26 @@ function validarEmail(valor) {
     }
 }
 
+console.log(curpValida("SUEJ010405HDFRLNA0"));
+
 function f(){
     location.reload();
-    console.log("Hola mundo1");
 }
-console.log("Hola mundo");
 function en(){
     // para select no clase sino id
-    alert("Tus datos son correctos?");
+    // alert("Tus datos son correctos?");
     var obj = new Object();
     obj.bol = document.querySelector(".js-boleta").value;
     obj.nombre = document.querySelector(".js-nombre").value;
     obj.apPaterno = document.querySelector(".js-apPaterno").value;
     obj.apMaterno = document.querySelector(".js-apMaterno").value;
     obj.curp = document.querySelector(".js-curp").value;
+    console.log(obj.curp);
     if(!curpValida(obj.curp)){
-        console.log("wro");
-        document.querySelector(".js-curp").style+=" wrong";
+        document.querySelector(".js-curp").classList.add("wrong");
+        break;
     }else{
-        console.log("wro");
-        document.querySelector(".js-curp").style+=" correct";
+        document.querySelector(".js-curp").classList.add("correct");
     }
     obj.genero = document.querySelector("#js-genero").innerHTML;
     obj.fecha = document.querySelector(".js-fecha").value;

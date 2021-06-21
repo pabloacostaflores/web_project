@@ -46,11 +46,11 @@
             <fieldset>
                 <legend>Identidad</legend>
 
-                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input js-boleta" placeholder="Ingresa tu boleta"></p>
-                <p>Nombre:<input type="text" name="nombre" size="35" class="input js-nombre" placeholder="Ingresa tu nombre"></p>
-                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input js-apPaterno" placeholder="Ingresa tu apellido paterno"></p>
-                <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input js-apMaterno" placeholder="Ingresa tu apellido materno"></p>
-                <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="35" class="input js-curp" placeholder="Ingresa curp" pattern="/^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/"></p>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input js-boleta" placeholder="Ingresa tu boleta" required></p>
+                <p>Nombre:<input type="text" name="nombre" size="35" class="input js-nombre" placeholder="Ingresa tu nombre" required></p>
+                <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input js-apPaterno" placeholder="Ingresa tu apellido paterno" required></p>
+                <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input js-apMaterno" placeholder="Ingresa tu apellido materno" required></p>
+                <p>CURP:<input type="text" name="curp " max size="35" class="input js-curp" placeholder="Ingresa curp" required></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
                     <span class="custom-select" >
@@ -64,7 +64,7 @@
                 </div>
                 <div id="nac">
                     <label for="fechanacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="bday" class="custom-date-field js-fecha"/>
+                    <input type="date" name="bday" class="custom-date-field js-fecha" required/>
                 </div>
             </fieldset>
             <!-- contacto -->
@@ -108,13 +108,13 @@
                             <option value="Zacatecas">Zacatecas</option>
                         </select>
                     </span></p>
-                    <p>Delegacion/Municipio:<input type="text" name="delegacion" size="35" class="input js-del" placeholder="Ingresa tu Delegacion/Municipio"></p>
-                    <p>Colonia:<input type="text" name="colonia" size="35" class="input js-col" placeholder="Ingresa tu colonia"></p>
-                    <p>Direccion de la calle:<input type="text" name="calle" size="35" class="input js-dir" placeholder="Ingresa tu calle, numero, lt, mzn"></p>
-                    <p>Codigo Postal:<input type="text" name="cp" size="35" class="input js-cp" placeholder="Ingresa tu codigo postal"></p>
-                    <p>Telefono de casa:<input type="text" name="tel_casa" size="35" class="input js-tel" placeholder="Ingresa tu numero de casa"></p>
-                    <p>Celular:<input type="text" name="celular" size="35" class="input js-cel" placeholder="Ingresa tu telefono celular"></p>
-                    <p>Email:<input type="text" name="correo" size="35" class="input js-email" placeholder="Ingresa tu correo electronico"></p>
+                    <p>Delegacion/Municipio:<input type="text" name="delegacion" size="35" class="input js-del" placeholder="Ingresa tu Delegacion/Municipio" required></p>
+                    <p>Colonia:<input type="text" name="colonia" size="35" class="input js-col" placeholder="Ingresa tu colonia" required></p>
+                    <p>Direccion de la calle:<input type="text" name="calle" size="35" class="input js-dir" placeholder="Ingresa tu calle, numero, lt, mzn" required></p>
+                    <p>Codigo Postal:<input type="text" name="cp" size="35" class="input js-cp" placeholder="Ingresa tu codigo postal" required></p>
+                    <p>Telefono de casa:<input type="text" name="tel_casa" size="35" class="input js-tel" placeholder="Ingresa tu numero de casa" required></p>
+                    <p>Celular:<input type="text" name="celular" size="35" class="input js-cel" placeholder="Ingresa tu telefono celular" required></p>
+                    <p>Email:<input type="text" name="correo" size="35" class="input js-email" placeholder="Ingresa tu correo electronico" required></p>
 
             </fieldset>
 
@@ -189,7 +189,7 @@
                 </span></p>
 
                 <p> Promedio:
-                <input type="number"  id="prom" name="promedio" min="1" max="10" value="1" step="0.01"/></p>
+                <input type="number"  id="prom" name="promedio" min="1" max="10" value="1" step="0.01" required/></p>
                 <div id="gen">
                     <label for="genero">Escom fue tu:</label>
                     <span class="custom-select" >
@@ -207,8 +207,8 @@
             </fieldset>
 
             <!-- Botones -->
-            <button class="btnMain js-enviar" style="float:left;">Enviar</button>
-            <button class="btnMain js-limpiar" style="float:right;">Limpiar</button>
+            <button type="button" btnMain js-enviar" style="float:left;">Enviar</button>
+            <button type="button" class="btnMain js-limpiar" style="float:right;">Limpiar</button>
             <div class="clearfix"></div>
             
             <!-- Inputs fantasma -->
