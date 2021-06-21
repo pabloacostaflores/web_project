@@ -1,17 +1,12 @@
 <?php
-	if($_GET){
-		if(isset($_GET['Enviar'])){
-			insert();
-		}
-	}
-	function insert(){
 		$Num_Boleta = $_GET["numero_de_boleta"];
 		$nombre = $_GET["nombre"];
 		$ape_paterno = $_GET["apellido_paterno"];
 		$ape_materno =$_GET["apellido_materno"];
 		$CURP =$_GET["curp"];
 		$genero =$_GET["genero"];
-		$fecha_nacimiento =$_GET["bday"];
+		$fecha_nacimientoWOF = $_GET["bday"];
+		$fecha_nacimiento = date("Y/m/d", strtotime($fecha_nacimientoWOF));
 		$estado =$_GET["estado"];
 		$delegacion =$_GET["delegacion"];
 		$calle =$_GET["calle"];
@@ -24,8 +19,6 @@
 		$entidad =$_GET["entidad_pro"];
 		$promedio =$_GET["promedio"];
 		$opcion =$_GET["opcion"];
-
-
 
 		$conexion = mysqli_connect("localhost","root","","escom");
 		$sql_1= "(sudent_id, student_name, student_first_surname, student_second_surname, student_curp, student_gender, student_date_of_birth, student_state, student_municipality, student_street, student_neighborhood, student_postal_code, student_home_phone, student_phone_number, student_email, student_school_of_origin, student_state_of_origin, student_final_grades, student_escom_order)";
