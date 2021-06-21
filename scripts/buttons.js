@@ -1,10 +1,10 @@
 //Función para validar una CURP
 function curpValida(curp) {
     var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
-        validado = curp.match(re);
+    
+    validado = curp.match(re);
     if (!validado)  //Coincide con el formato general?
         return false;
-    
     //Validar que coincida el dígito verificador
     function digitoVerificador(curp17) {
         //Fuente https://consultas.curp.gob.mx/CurpSP/
@@ -44,6 +44,13 @@ function en(){
     obj.apPaterno = document.querySelector(".js-apPaterno").value;
     obj.apMaterno = document.querySelector(".js-apMaterno").value;
     obj.curp = document.querySelector(".js-curp").value;
+    if(!curpValida(obj.curp)){
+        console.log("wro");
+        document.querySelector(".js-curp").style+=" wrong";
+    }else{
+        console.log("wro");
+        document.querySelector(".js-curp").style+=" correct";
+    }
     obj.genero = document.querySelector("#js-genero").innerHTML;
     obj.fecha = document.querySelector(".js-fecha").value;
     obj.estado = document.querySelector("#js-estado").innerHTML;
@@ -63,7 +70,7 @@ function en(){
     // if(exito)alert("Datos enviados con exito!");
     // else alert("Hubo un error en el sistema.");
     alert("Te hemos enviado a tu correo el pdf de tu inscripcion");
-    
+
 }
 function st(){
     var x = document.querySelector(".js-lstudent");
