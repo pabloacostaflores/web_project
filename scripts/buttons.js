@@ -44,9 +44,9 @@ function en(){
     obj.apPaterno = document.querySelector(".js-apPaterno").value;
     obj.apMaterno = document.querySelector(".js-apMaterno").value;
     obj.curp = document.querySelector(".js-curp").value;
-    obj.genero = document.querySelector("#js-genero").value;
+    obj.genero = document.querySelector("#js-genero").innerHTML;
     obj.fecha = document.querySelector(".js-fecha").value;
-    obj.estado = document.querySelector("#js-estado").value;
+    obj.estado = document.querySelector("#js-estado").innerHTML;
     obj.del = document.querySelector(".js-del").value;
     obj.col = document.querySelector(".js-col").value;
     obj.dir = document.querySelector(".js-dir").value;
@@ -54,9 +54,9 @@ function en(){
     obj.tel = document.querySelector(".js-tel").value;
     obj.cel = document.querySelector(".js-cel").value;
     obj.email = document.querySelector(".js-email").value;
-    obj.estpro = document.querySelector("#js-escuela").value;
-    obj.pro = document.querySelector("#js-entidad_pro").value;
-    obj.opci = document.querySelector("#js-opcion").value;
+    obj.estpro = document.querySelector("#js-escuela").innerHTML;
+    obj.pro = document.querySelector("#js-entidad_pro").innerHTML;
+    obj.opci = document.querySelector("#js-opcion").innerHTML;
     console.log(obj);
     //insertar lo de arriba en php
 
