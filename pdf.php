@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
   
     include("./fpdf182/fpdf.php");
    // $consulta = $_GET["numero_de_boleta"];
@@ -93,6 +93,4 @@
     $pdf->Cell(0,10,'Salon: '."$fila[22]",0,1);
 
     $pdf->Output();
-?>
-
-
+?>-->

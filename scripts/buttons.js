@@ -32,9 +32,36 @@ function validarEmail(valor) {
 
 function f(){
     location.reload();
+    console.log("Hola mundo1");
 }
+console.log("Hola mundo");
 function en(){
+    // para select no clase sino id
+    console.log("Hola mundo2");
+    var obj = new Object();
+    obj.bol = document.querySelector(".js-boleta").value;
+    obj.nombre = document.querySelector(".js-nombre").value;
+    obj.apPaterno = document.querySelector(".js-apPaterno").value;
+    obj.apMaterno = document.querySelector(".js-apMaterno").value;
+    obj.curp = document.querySelector(".js-curp").value;
+    obj.genero = document.querySelector("#js-genero").value;
+    obj.fecha = document.querySelector(".js-fecha").value;
+    obj.estado = document.querySelector("#js-estado").value;
+    obj.del = document.querySelector(".js-del").value;
+    obj.col = document.querySelector(".js-col").value;
+    obj.dir = document.querySelector(".js-dir").value;
+    obj.cp = document.querySelector(".js-cp").value;
+    obj.tel = document.querySelector(".js-tel").value;
+    obj.cel = document.querySelector(".js-cel").value;
+    obj.email = document.querySelector(".js-email").value;
+    obj.estpro = document.querySelector("#js-escuela").value;
+    obj.pro = document.querySelector("#js-entidad_pro").value;
+    obj.opci = document.querySelector("#js-opcion").value;
+    console.log(obj);
+    //insertar lo de arriba en php
 
+    // if(exito)alert("Datos enviados con exito!");
+    // else alert("Hubo un error en el sistema.");
 }
 function st(){
     var x = document.querySelector(".js-lstudent");
