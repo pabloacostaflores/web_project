@@ -1,31 +1,62 @@
 <?php
-	if($_GET){
-		if(isset($_GET['Enviar'])){
-			insert();
-		}
-	}
-	function insert(){
 		$Num_Boleta = $_GET["numero_de_boleta"];
+		print $Num_Boleta;
+		echo '<br>';
 		$nombre = $_GET["nombre"];
+		print $nombre;
+		echo '<br>';
 		$ape_paterno = $_GET["apellido_paterno"];
+		print $ape_paterno;
+		echo '<br>';
 		$ape_materno =$_GET["apellido_materno"];
+		print $ape_materno;
+		echo '<br>';
 		$CURP =$_GET["curp"];
+		print $CURP;
+		echo '<br>';
 		$genero =$_GET["genero"];
-		$fecha_nacimiento =$_GET["bday"];
+		print $genero;
+		echo '<br>';
+		$fecha_nacimientoWOF = $_GET["bday"];
+		$fecha_nacimiento = date("Y/m/d", strtotime($fecha_nacimientoWOF));
+		print $fecha_nacimiento;
+		echo '<br>';
 		$estado =$_GET["estado"];
+		print $estado;
+		echo '<br>';
 		$delegacion =$_GET["delegacion"];
+		print $delegacion;
+		echo '<br>';
 		$calle =$_GET["calle"];
+		print $calle;
+		echo '<br>';
 		$colonia =$_GET["colonia"];
+		print $colonia;
+		echo '<br>';
 		$codigoP =$_GET["cp"];
+		print $codigoP;
+		echo '<br>';
 		$tele_casa =$_GET["tel_casa"];
+		print $tele_casa;
+		echo '<br>';
 		$num_telefono =$_GET["celular"];
+		print $num_telefono;
+		echo '<br>';
 		$correo =$_GET["correo"];
+		print $correo;
+		echo '<br>';
 		$escuela =$_GET["escuela"];
+		print $escuela;
+		echo '<br>';
 		$entidad =$_GET["entidad_pro"];
+		print $entidad;
+		echo '<br>';
 		$promedio =$_GET["promedio"];
+		print $promedio;
+		echo '<br>';
 		$opcion =$_GET["opcion"];
-
-
+		print $opcion;
+		echo '<br>';
 
 		$conexion = mysqli_connect("localhost","root","","escom");
 		$sql_1= "(sudent_id, student_name, student_first_surname, student_second_surname, student_curp, student_gender, student_date_of_birth, student_state, student_municipality, student_street, student_neighborhood, student_postal_code, student_home_phone, student_phone_number, student_email, student_school_of_origin, student_state_of_origin, student_final_grades, student_escom_order)";
@@ -34,5 +65,4 @@
 		$sql = "INSERT INTO STUDENTS $sql_1 VALUES $sql_2" ;
 
 		mysqli_query($conexion, $sql);
-	}
 ?>
