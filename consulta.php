@@ -63,7 +63,7 @@ if (!$conn)
 <!--Registrar-->
 <div class="Registrar">
     <div class="menu-mostrar contenedor-boton">
-        <a href="index.html" class="bt-menu">
+        <a href="registrar.php" class="bt-menu">
             <h3 class="centrar-texto fw-900">Registrar</h3>
         </a>  
        
