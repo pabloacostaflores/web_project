@@ -47,11 +47,11 @@
             <fieldset>
                 <legend>Identidad</legend>
 
-                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input js-boleta" placeholder="Ingresa tu boleta" required></p>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" maxlength="10" class="input js-boleta" oninput="validarBoleta(this)" placeholder="Ingresa tu boleta" required></p>
                 <p>Nombre:<input type="text" name="nombre" size="35" class="input js-nombre" placeholder="Ingresa tu nombre" required></p>
                 <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input js-apPaterno" placeholder="Ingresa tu apellido paterno" required></p>
                 <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input js-apMaterno" placeholder="Ingresa tu apellido materno" required></p>
-                <p>CURP:<input type="text" name="curp" max size="35" class="input js-curp" placeholder="Ingresa curp" required></p>
+                <p>CURP:<input type="text" name="curp" class="input js-curp" oninput="validarCurp(this)" placeholder="Ingresa curp" required></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
                     <span class="custom-select" >
@@ -113,10 +113,10 @@
                     <p>Delegacion/Municipio:<input type="text" name="delegacion" size="35" class="input js-del" placeholder="Ingresa tu Delegacion/Municipio" required></p>
                     <p>Colonia:<input type="text" name="colonia" size="35" class="input js-col" placeholder="Ingresa tu colonia" required></p>
                     <p>Direccion de la calle:<input type="text" name="calle" size="35" class="input js-dir" placeholder="Ingresa tu calle, numero, lt, mzn" required></p>
-                    <p>Codigo Postal:<input type="text" name="cp" size="35" class="input js-cp" placeholder="Ingresa tu codigo postal" required></p>
-                    <p>Telefono de casa:<input type="text" name="tel_casa" size="35" class="input js-tel" placeholder="Ingresa tu numero de casa" required></p>
-                    <p>Celular:<input type="text" name="celular" size="35" class="input js-cel" placeholder="Ingresa tu telefono celular" required></p>
-                    <p>Email:<input type="text" name="correo" size="35" class="input js-email" placeholder="Ingresa tu correo electronico" required></p>
+                    <p>Codigo Postal:<input type="text" name="cp" maxlength="5" oninput="validarCP(this)" size="35" class="input js-cp"  placeholder="Ingresa tu codigo postal" required></p>
+                    <p>Telefono de casa:<input type="text" maxlength="10" name="tel_casa" size="35" oninput="validarTel(this)" class="input js-tel" placeholder="Ingresa tu numero de casa" required></p>
+                    <p>Celular:<input type="text" maxlength="10" name="celular" size="35" class="input js-cel" oninput="validarCel(this)" placeholder="Ingresa tu telefono celular" required></p>
+                    <p>Email:<input type="text" name="correo" size="35" oninput="validarEmail(this)" class="input js-email" placeholder="Ingresa tu correo electronico" required></p>
 
             </fieldset>
 
@@ -209,7 +209,8 @@
             </fieldset>
 
             <!-- Botones -->
-            <button type="submit" class="btnMain js-enviar" style="float:left;" >Enviar</button>
+            <button type="button" class="btnMain js-enviar" style="float:left;" >Enviar</button>
+            <button type="submit" class="js-submit" style="display: none;">Enviar</button>
             <button type="button" class="btnMain js-limpiar" style="float:right;">Limpiar</button>
 			<button type="button" onclick="location.href='./generarpdf.html'" class="btnMain js-limpiar" style="float:center;">Generar pdf</button>
             <div class="clearfix"></div>
