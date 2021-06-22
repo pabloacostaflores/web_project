@@ -166,7 +166,7 @@ function en(){
         alert("quedas registrado xd");
         document.querySelector(".js-submit").click();
     }else{
-        alert("huevos");
+        alert("No quedaste registrado");
     }
 }
 function st(){

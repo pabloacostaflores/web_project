@@ -294,3 +294,10 @@ canvas{
 .js-curp{
     text-transform: uppercase;
 }
+.creditos{
+    color:#FFF;
+    float:left;
+    margin: 2.5% 0 0 12%;
+    display: inline;
+    font-size: 16px;
+}
