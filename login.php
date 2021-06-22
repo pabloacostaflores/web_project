@@ -24,6 +24,11 @@ if ($numero_fila == 1){
 }
 else if ($numero_fila == 0){
     echo "Tus credenciales son invalidas";
+        $var = "Tus credenciales son incorrectas";
+    echo "<script> alert('".$var."');
+        window.location= 'login.html' </script>";
+    
+    
 }
 
 
