@@ -3,7 +3,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "prueba";
+$dbname = "escom";
 
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -15,7 +15,7 @@ if (!$conn)
 
 $usuario = $_POST["usuario"];
 $password = $_POST["pass"];
-$query = mysqli_query($conn,"SELECT * FROM admins WHERE Usuario = '".$usuario."' And Password = '".$password."'");
+$query = mysqli_query($conn,"SELECT * FROM ADMINS WHERE admin_user = '".$usuario."' And admin_password = '".$password."'");
 $numero_fila = mysqli_num_rows($query);
 
 if ($numero_fila == 1){

@@ -2,7 +2,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "prueba";
+$dbname = "escom";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if (!$conn) 
 {
@@ -122,33 +122,31 @@ if (!$conn)
 </tr>
 
     <?php 
-    $query = mysqli_query($conn,"SELECT * FROM datos ");
+    $query = mysqli_query($conn,"SELECT * FROM STUDENTS ");
     
 while($datos=mysqli_fetch_array($query)){
 echo "<tr>";
-   echo "<td>".$datos['Boleta']."</td>";
-   echo "<td>".$datos['Nombre']."</td>";
-   echo "<td>".$datos['ApellidoP']."</td>";
-   echo "<td>".$datos['ApellidoM']."</td>";
-   echo "<td>".$datos['CURP']."</td>";
-   echo "<td>".$datos['Genero']."</td>";
-   echo "<td>".$datos['fechanacimiento']."</td>";
-   echo "<td>".$datos['Estado']."</td>";
-   echo "<td>".$datos['Del']."</td>";
-   echo "<td>".$datos['Col']."</td>";
-   echo "<td>".$datos['Dir']."</td>";
-   echo "<td>".$datos['Cp']."</td>";
-   echo "<td>".$datos['Tel']."</td>";
-   echo "<td>".$datos['Cel']."</td>";
-   echo "<td>".$datos['Email']."</td>";
-   echo "<td>".$datos['Escuelaproc']."</td>";
-   echo "<td>".$datos['EntidadProc']."</td>";
-   echo "<td>".$datos['Promedio']."</td>";
-   echo "<td>".$datos['Opcion']."</td>";
+   echo "<td>".$datos['student_id']."</td>";
+   echo "<td>".$datos['student_name']."</td>";
+   echo "<td>".$datos['student_first_surname']."</td>";
+   echo "<td>".$datos['student_second_surname']."</td>";
+   echo "<td>".$datos['student_curp']."</td>";
+   echo "<td>".$datos['student_gender']."</td>";
+   echo "<td>".$datos['student_date_of_birth']."</td>";
+   echo "<td>".$datos['student_state']."</td>";
+   echo "<td>".$datos['student_municipality']."</td>";
+   echo "<td>".$datos['student_neighborhood']."</td>";
+   echo "<td>".$datos['student_street']."</td>";
+   echo "<td>".$datos['student_curp']."</td>";
+   echo "<td>".$datos['student_home_phone']."</td>";
+   echo "<td>".$datos['student_phone_number']."</td>";
+   echo "<td>".$datos['student_email']."</td>";
+   echo "<td>".$datos['student_school_of_origin']."</td>";
+   echo "<td>".$datos['student_state_of_origin']."</td>";
+   echo "<td>".$datos['student_final_grade']."</td>";
+   echo "<td>".$datos['student_escom_order']."</td>";
    echo "</tr>";
 }
-
-
 
     ?>
 
