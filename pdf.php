@@ -15,12 +15,12 @@
             $this->Image('./resources/img/logo_IPN.png',10,8,30);
 			$this->Image('./resources/img/logoESCOM.png',170,9,30);
 			$this->SetFont('Arial','B',20);
-			$this->Cell(0,10,'ESCOM',0,1,'C');
+			$this->Cell(0,10,'IPN - ESCOM',0,1,'C');
 			$this->SetFont('Arial','B',15);
-			$this->Cell(0,10,'DEPARTAMENTO DE ADMISION ',0,1,'C');
+			$this->Cell(0,10,utf8_decode('Cita para el examen diagnóstico'),0,1,'C');
 
-            $this->Ln(10);
-			$this->Line(12,33,200,33);
+            $this->Ln(5);
+			$this->Line(12,34,200,34);
         }
 
         // Pie de página
@@ -68,43 +68,44 @@
     	$pdf->AddPage();
 	$pdf->Ln(1);
 	
-	$pdf->SetFont('Courier','B',14);
-    	$pdf->Cell(0,10,'Datos Generales',0,1,'C');
+	$pdf->SetFont('Courier','B',15);
+	$pdf->SetFillColor(143, 196, 255);
+    $pdf->Cell(0,10,'DATOS GENERALES',0,1,'C',True);
 	$pdf->SetFont('Times','B',12);
-	$pdf->Cell(0,10,'Nombre(s): '."$fila[1]",0,1);
-    	$pdf->Cell(0,10,'Apellido paterno: '."$fila[2]",0,1);
-	$pdf->Cell(0,10,'Apellidos materno: '."$fila[3]",0,1);
-	$pdf->Cell(0,10,'Numero de Boleta: '."$fila[0]",0,1);
-    	$pdf->Cell(0,10,'CURP : '."$fila[4]",0,1);
-	$pdf->Cell(0,10,'Genero : '."$fila[6]",0,1);	
-	$pdf->Cell(0,10,'Fecha de nacimiento : '."$fila[5]",0,1);	
+	$pdf->Cell(0,10,utf8_decode('Nombre(s): '."$fila[1]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('Apellido paterno: '."$fila[2]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Apellidos materno: '."$fila[3]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Número de Boleta: '."$fila[0]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('CURP : '."$fila[4]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Género : '."$fila[6]"),0,1);	
+	$pdf->Cell(0,10,utf8_decode('Fecha de nacimiento : '."$fila[5]"),0,1);	
 	
-	$pdf->SetFont('Courier','B',14);
-	$pdf->Cell(0,10,'Contacto',0,1,'C');
+	$pdf->SetFont('Courier','B',15);
+	$pdf->Cell(0,10,'CONTACTO',0,1,'C',True);
 	$pdf->SetFont('Times','B',12);
-	$pdf->Cell(0,10,'Estado: '."$fila[7]",0,1);
-    	$pdf->Cell(0,10,'Delegacion/Municipio: '."$fila[8]",0,1);
-	$pdf->Cell(0,10,'Colonia: '."$fila[9]",0,1);
-    	$pdf->Cell(0,10,'Calle: '."$fila[10]",0,1);
-	$pdf->Cell(0,10,'Codigo Postal: '."$fila[11]",0,1);	
-	$pdf->Cell(0,10,'Telefono: '."$fila[12]",0,1);	
-	$pdf->Cell(0,10,'Celular: '."$fila[13]",0,1);	
-	$pdf->Cell(0,10,'Correo electronico: '."$fila[14]",0,1);
+	$pdf->Cell(0,10,utf8_decode('Estado: '."$fila[7]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('Delegación/Municipio: '."$fila[8]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Colonia: '."$fila[9]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('Calle: '."$fila[10]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Código Postal: '."$fila[11]"),0,1);	
+	$pdf->Cell(0,10,utf8_decode('Telefono: '."$fila[12]"),0,1);	
+	$pdf->Cell(0,10,utf8_decode('Celular: '."$fila[13]"),0,1);	
+	$pdf->Cell(0,10,utf8_decode('Correo electrónico: '."$fila[14]"),0,1);
 	
-	$pdf->SetFont('Courier','B',14);
-	$pdf->Cell(0,10,'Procedencia',0,1,'C');
+	$pdf->SetFont('Courier','B',15);
+	$pdf->Cell(0,10,'PROCEDENCIA',0,1,'C',True);
 	$pdf->SetFont('Times','B',12);
-	$pdf->Cell(0,10,'Escuela de procedencia: '."$fila[15]",0,1);
-    	$pdf->Cell(0,10,'Entidad de procedencia: : '."$fila[16]",0,1);
-	$pdf->Cell(0,10,'Promedio: '."$fila[17]",0,1);
-    	$pdf->Cell(0,10,'Opcion: '."$fila[18]",0,1);
+	$pdf->Cell(0,10,utf8_decode('Escuela de procedencia: '."$fila[15]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('Entidad de procedencia: '."$fila[16]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Promedio: '."$fila[17]"),0,1);
+    $pdf->Cell(0,10,utf8_decode('Opción: '."$fila[18]"),0,1);
 	
-	 $pdf->Ln(20);
-	$pdf->SetFont('Courier','B',14);
-	$pdf->Cell(0,10,'Ficha de Examen ',0,1,'C');
+	$pdf->Ln(20);
+	$pdf->SetFont('Courier','B',15);
+	$pdf->Cell(0,10,'FICHA DE EXAMEN ',0,1,'C',True);
 	$pdf->SetFont('Times','B',14);
-	$pdf->Cell(0,10,'Grupo: '."$row[1]",0,1);
-	$pdf->Cell(0,10,'Fecha y Hora: '."$row[2]",0,1);
+	$pdf->Cell(0,10,utf8_decode('Grupo: 	'."$row[1]"),0,1);
+	$pdf->Cell(0,10,utf8_decode('Fecha y Hora: '."$row[2]"),0,1);
 	
 
     $pdf->Output();
@@ -114,6 +115,3 @@
 	
 	//session_destroy();
 ?>
-
-
-
