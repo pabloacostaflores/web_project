@@ -43,7 +43,7 @@
     <div id="particles-js" class="fondoForm"></div>
     <div class="form">
             <!-- identidad -->
-        <form action="guardar_datos.php" method="post">
+        <form action="./checkdata.php" method="post">
             <fieldset>
                 <legend>Identidad</legend>
 
@@ -51,11 +51,11 @@
                 <p>Nombre:<input type="text" name="nombre" size="35" class="input js-nombre" placeholder="Ingresa tu nombre" required></p>
                 <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input js-apPaterno" placeholder="Ingresa tu apellido paterno" required></p>
                 <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input js-apMaterno" placeholder="Ingresa tu apellido materno" required></p>
-                <p>CURP:<input type="text" name="curp " max size="35" class="input js-curp" placeholder="Ingresa curp" required></p>
+                <p>CURP:<input type="text" name="curp" max size="35" class="input js-curp" placeholder="Ingresa curp" required></p>
                 <div id="gen">
                     <label for="genero">Genero:</label>
                     <span class="custom-select" >
-                        <select content="genero">
+                        <select name="genero">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
@@ -72,8 +72,8 @@
 
             <fieldset>
                 <legend>Contacto</legend>
-                    <p id="estadop">Estado:<span class="custom-select" >
-                        <select content="estado">
+                    <p id="estado">Estado:<span class="custom-select" >
+                        <select name="estado">
                             <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
@@ -125,7 +125,7 @@
                 <legend>Procedencia:</legend>
                 <p>Ingresa tu escuela de procedencia:
                 <span class="custom-select" >
-                    <select content="escuela">
+                    <select name="escuela_pro">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                         <option value="Cecyt #1 Gonzalo Vázquez Vela">Cecyt #1 "Gonzalo Vázquez Vela"</option>
                         <option value="Cecyt #2 Miguel Bernard Perales">Cecyt #2 "Miguel Bernard Perales"</option>
@@ -152,7 +152,7 @@
                 </span></p>
 
                 <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" >
-                    <select content="entidad_pro">
+                    <select name="entidad_pro">
                         <option value="" disabled selected>Selecciona tu opcion</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
@@ -194,12 +194,12 @@
                 <div id="gen">
                     <label for="genero">Escom fue tu:</label>
                     <span class="custom-select" >
-                        <select content="opcion">
+                        <select name="opcion">
                             <option value="" disabled selected>Selecciona tu opcion</option>
-                            <option value="1Opcion">1ra Opción</option>
-                            <option value="2Opcion">2da Opción</option>
-                            <option value="3Opcion">3er Opción</option>
-                            <option value="4Opcion">4ta Opción</option>
+                            <option value="1 Opcion">1ra Opción</option>
+                            <option value="2 Opcion">2da Opción</option>
+                            <option value="3 Opcion">3er Opción</option>
+                            <option value="4 Opcion">4ta Opción</option>
 
                         </select>
                     </span>
@@ -208,15 +208,16 @@
             </fieldset>
 
             <!-- Botones -->
-            <button type="button" class="btnMain js-enviar" style="float:left;">Enviar</button>
+            <button type="submit" class="btnMain js-enviar" style="float:left;" >Enviar</button>
             <button type="button" class="btnMain js-limpiar" style="float:right;">Limpiar</button>
+			<button type="button" onclick="location.href='./generarpdf.html'" class="btnMain js-limpiar" style="float:center;">Generar pdf</button>
             <div class="clearfix"></div>
             
-            <!-- Inputs fantasma -->
+            <!-- Inputs fantasma 
             <input type="text" name="genero" id="genero" style="display: none">
             <input type="text" name="estado" id="genero" style="display: none">
             <input type="text" name="entidad_pro" id="genero" style="display: none">
-            <input type="text" name="Opcion" id="genero" style="display: none">
+            <input type="text" name="Opcion" id="genero" style="display: none">-->
 
         <!-- form global -->
     </form>      

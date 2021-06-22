@@ -57,9 +57,9 @@
 	$fila = mysqli_fetch_row($resultado);
 	$row = mysqli_fetch_row($resultado2);
 	
-	$_SESSION["boleta"] = $fila[3];
+	$_SESSION["boleta"] = $fila[0];
 	$_SESSION["correo_alumno"] = $fila[14];
-	$_SESSION["nombre_alumno"] = $fila[0];
+	$_SESSION["nombre_alumno"] = $fila[1];
 	
 	
 	
@@ -76,8 +76,8 @@
 	$pdf->Cell(0,10,'Apellidos materno: '."$fila[3]",0,1);
 	$pdf->Cell(0,10,'Numero de Boleta: '."$fila[0]",0,1);
     	$pdf->Cell(0,10,'CURP : '."$fila[4]",0,1);
-	$pdf->Cell(0,10,'Genero : '."$fila[5]",0,1);	
-	$pdf->Cell(0,10,'Fecha de nacimiento : '."$fila[6]",0,1);	
+	$pdf->Cell(0,10,'Genero : '."$fila[6]",0,1);	
+	$pdf->Cell(0,10,'Fecha de nacimiento : '."$fila[5]",0,1);	
 	
 	$pdf->SetFont('Courier','B',14);
 	$pdf->Cell(0,10,'Contacto',0,1,'C');
@@ -107,10 +107,12 @@
 	$pdf->Cell(0,10,'Fecha y Hora: '."$row[2]",0,1);
 	
 
-    	$pdf->Output();
+    $pdf->Output();
 	$_SESSION["doc"] = $pdf->Output('','S');
 
    	include("./sendpdf.php");
+	
+	//session_destroy();
 ?>
 
 

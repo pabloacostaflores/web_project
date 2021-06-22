@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-e quiv="content-type" content="text/html; charset=utf-8" />
+    <title>GENERAR PDF</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- media queries -->
+    <link rel="stylesheet" href="css/small.css" media="(max-width: 1000px)">
+    <link rel="shortcut icon" href="resources/img/burrita.jpg">
+</head>
+
+<body>
+    <!-- header with buttons -->
+   <div class="header">
+        <span class="logo">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+            width="260" height="108" viewBox="0 0 140 110" style="position:absolute">
+            <polygon points="50,0 0,100 150,100 200,0 " fill="white"/>
+            </svg>
+            <a href="https://www.escom.ipn.mx/" class="js-es">
+            <img src="resources/img/escom.png" alt="escom-logo" class="logoimg">
+        </span>
+        <span class="logo btnStudent">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+            width="260px" height="108" viewBox="0 0 140 110" style="position:absolute">
+            <polygon id="poliStudent" class="js-lstudent" points="50,0 0,100 150,100 200,0 " fill="#6C1D45" />
+            </svg>
+            <a href="#" class="js-student"><img src="resources/img/student.png" alt="alumno-logo" id="logoimg1"></a>
+        </span> 
+        <span class="logo btnAdmin">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+            width="260" height="108" viewBox="0 0 140 110" style="position:absolute">
+            <polygon id="poliAdmin" points="50,0 0,100 150,100 200,0 " fill="rgba(207, 205, 205, 0.795)"/>
+            </svg>
+            <a href="login.html" class="js-admin"><img src="resources/img/admin.png" alt="admin-logo" class="logoimg"></a>
+        </span>
+    </div>
+    <!-- form -->
+    <div id="particles-js" class="fondoForm"></div>
+    <div class="form">
+        <form method="GET" action="./pdf.php">
+            <!-- identidad -->
+            <fieldset>
+                <legend>PDF</legend>
+<br>
+                <label for="usuario">Boleta:</label><input type="text" name="numero_de_boleta" size="35" class="input-admin" placeholder="Ingresa tu boleta">
+                
+
+<br>                <button class="btnMain Espacio" style="float:center;" type="submit">GENERAR PDF</button>
+
+            </fieldset>
+
+
+        </form>
+        <!-- particles -->
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

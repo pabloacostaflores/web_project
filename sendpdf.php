@@ -36,9 +36,9 @@
 	$phpmailer->Body .="<p style='color:Navy;'>Saludos, gracias.</p>";
 	
 	$phpmailer->IsHTML(true);
-	$phpmailer->AddStringAttachment($_SESSION["doc"], $_SESSION["namefile"], 'base64', 'application/pdf');
+	$phpmailer->AddStringAttachment($_SESSION["doc"], $namefile, 'base64', 'application/pdf');
 
 
 	$phpmailer->Send();
-	
+	session_destroy();
 ?>

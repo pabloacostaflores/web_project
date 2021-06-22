@@ -51,7 +51,6 @@ $Boleta2=$_GET["Boleta2"];
                 <legend>Identidad</legend>
     
                 <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input" placeholder="Ingresa tu boleta" value=<?php echo $datos['student_id'] ?>>
-           
             </p>
                 <p>Nombre:<input type="text" name="nombre" size="35" class="input" placeholder="Ingresa tu nombre" value=<?php echo $datos['student_name'] ?>></p>
                 <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input" placeholder="Ingresa tu apellido paterno" value=<?php echo $datos['student_first_surname'] ?>></p>
