@@ -88,7 +88,7 @@
 	$pdf->Cell(0,10,utf8_decode('Colonia: '."$fila[9]"),0,1);
     $pdf->Cell(0,10,utf8_decode('Calle: '."$fila[10]"),0,1);
 	$pdf->Cell(0,10,utf8_decode('Código Postal: '."$fila[11]"),0,1);	
-	$pdf->Cell(0,10,utf8_decode('Telefono: '."$fila[12]"),0,1);	
+	$pdf->Cell(0,10,utf8_decode('Teléfono: '."$fila[12]"),0,1);	
 	$pdf->Cell(0,10,utf8_decode('Celular: '."$fila[13]"),0,1);	
 	$pdf->Cell(0,10,utf8_decode('Correo electrónico: '."$fila[14]"),0,1);
 	

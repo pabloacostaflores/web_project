@@ -1,4 +1,49 @@
 <?php
+
+// Desactivar toda notificación de error
+
+error_reporting(0);
+
+// Notificar solamente errores de ejecución
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+ // Notificar E_NOTICE también puede ser bueno (para informar de variables
+
+// no inicializadas o capturar errores en nombres de variables ...)
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
+ 
+
+// Notificar todos los errores excepto E_NOTICE
+
+// Este es el valor predeterminado establecido en php.ini
+
+error_reporting(E_ALL ^ E_NOTICE);
+
+ 
+
+// Notificar todos los errores de PHP (ver el registro de cambios)
+
+error_reporting(E_ALL);
+
+ 
+
+// Notificar todos los errores de PHP
+
+error_reporting(-1);
+
+ 
+
+// Lo mismo que error_reporting(E_ALL);
+
+ini_set('error_reporting', E_ALL);
+
+?>
+
+
+<?php
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
@@ -127,8 +172,9 @@ $aux=0;
                         </tr>
                         <tr>
                             <?php $Boleta=$_POST['boleta'];
-                                $query = mysqli_query($conn,"SELECT * FROM STUDENTS WHERE student_id = '".$Boleta."'");
-                                $datos=mysqli_fetch_array($query);   
+                                    $query = mysqli_query($conn,"SELECT * FROM students WHERE student_id = '".$Boleta."'");
+                                    $datos=mysqli_fetch_array($query);
+                        
                             ?>
 
                             <td>
@@ -352,12 +398,13 @@ $aux=0;
                         <tr>
                         <tr>
                             <?php $Boleta1=$_POST['boleta1'];
-    $query1 = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta1."'");
+    $query1 = mysqli_query($conn,"SELECT * FROM STUDENTS WHERE student_id = '".$Boleta1."'");
     $datos1=mysqli_fetch_array($query1);   
     if($aux=1){
      
-        $query2 = mysqli_query($conn,"DELETE FROM datos WHERE Boleta = '".$Boleta1."'");
-       
+        $query2 = mysqli_query($conn,"DELETE FROM timetable WHERE student_id = '".$Boleta1."'");
+        $query0 = mysqli_query($conn,"DELETE FROM students WHERE student_id = '".$Boleta1."'");
+  
     }
     ?>
 
@@ -564,7 +611,7 @@ $aux=0;
                         <tr>
                         <tr>
                             <?php $Boleta2=$_POST['boleta2'];
-    $query2 = mysqli_query($conn,"SELECT * FROM datos WHERE Boleta = '".$Boleta2."'");
+    $query2 = mysqli_query($conn,"SELECT * FROM STUDENTS WHERE student_id = '".$Boleta2."'");
     $datos2=mysqli_fetch_array($query2);   
     
 

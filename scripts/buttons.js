@@ -139,7 +139,7 @@ function emailValidar(valor) {
     for(var i=0;i<str.length;i++){
         if(str.charAt(i) == '.')punto=true;
     }
-    if(/^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(valor) && punto){
+    if(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(valor) && punto){
         return true;
     } return false;
 }
@@ -163,10 +163,10 @@ function f(){
 function en(){
     console.log({vcurp ,vbol,vcp,vtel,vcel,vemail });
     if(vcurp == 1 && vbol == 1 && vcp == 1 && vtel == 1 && vcel == 1 && vemail == 1){
-        alert("quedas registrado xd");
+        alert("Los datos ingresados son correctos");
         document.querySelector(".js-submit").click();
     }else{
-        alert("No quedaste registrado");
+        alert("Verifica la entrada de tus datos");
     }
 }
 function st(){

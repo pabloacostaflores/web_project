@@ -36,20 +36,20 @@
     <div id="particles-js" class="fondoForm"></div>
     <div class="form">
             <!-- identidad -->
-        <form action="guardar_datos.php" method="post">
+            <form action="./checkdata_admin.php" method="post">
             <fieldset>
                 <legend>Identidad</legend>
 
-                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" class="input js-boleta" placeholder="Ingresa tu boleta" required></p>
+                <p>No. Boleta:<input type="text" name="numero_de_boleta" size="35" maxlength="10" class="input js-boleta" oninput="validarBoleta(this)" placeholder="Ingresa tu boleta" required></p>
                 <p>Nombre:<input type="text" name="nombre" size="35" class="input js-nombre" placeholder="Ingresa tu nombre" required></p>
                 <p>Apellido Paterno:<input type="text" name="apellido_paterno" size="35" class = "input js-apPaterno" placeholder="Ingresa tu apellido paterno" required></p>
                 <p>Apellido Materno:<input type="text" name="apellido_materno" size="35" class="input js-apMaterno" placeholder="Ingresa tu apellido materno" required></p>
-                <p>CURP:<input type="text" name="curp " max size="35" class="input js-curp" placeholder="Ingresa curp" required></p>
+                <p>CURP:<input type="text" name="curp" class="input js-curp" oninput="validarCurp(this)" placeholder="Ingresa curp" required></p>
                 <div id="gen">
-                    <label for="genero">Genero:</label>
+                    <label for="genero">Género:</label>
                     <span class="custom-select" >
-                        <select content="genero">
-                            <option value="" disabled selected>Selecciona tu opcion</option>
+                        <select name="genero">
+                            <option value="" disabled selected>Selecciona tu opción</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                             <option value="Otro">Otro</option>
@@ -65,9 +65,10 @@
 
             <fieldset>
                 <legend>Contacto</legend>
-                    <p id="estadop">Estado:<span class="custom-select" >
-                        <select content="estado">
-                            <option value="" disabled selected>Selecciona tu opcion</option>
+                    <p id="estado">
+                        Estado:<span class="custom-select" >
+                        <select name="estado">
+                            <option value="" disabled selected>Selecciona tu opción</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
                             <option value="Baja California Sur">Baja California Sur</option>
@@ -102,13 +103,13 @@
                             <option value="Zacatecas">Zacatecas</option>
                         </select>
                     </span></p>
-                    <p>Delegacion/Municipio:<input type="text" name="delegacion" size="35" class="input js-del" placeholder="Ingresa tu Delegacion/Municipio" required></p>
+                    <p>Delegación/Municipio:<input type="text" name="delegacion" size="35" class="input js-del" placeholder="Ingresa tu Delegacion/Municipio" required></p>
                     <p>Colonia:<input type="text" name="colonia" size="35" class="input js-col" placeholder="Ingresa tu colonia" required></p>
-                    <p>Direccion de la calle:<input type="text" name="calle" size="35" class="input js-dir" placeholder="Ingresa tu calle, numero, lt, mzn" required></p>
-                    <p>Codigo Postal:<input type="text" name="cp" size="35" class="input js-cp" placeholder="Ingresa tu codigo postal" required></p>
-                    <p>Telefono de casa:<input type="text" name="tel_casa" size="35" class="input js-tel" placeholder="Ingresa tu numero de casa" required></p>
-                    <p>Celular:<input type="text" name="celular" size="35" class="input js-cel" placeholder="Ingresa tu telefono celular" required></p>
-                    <p>Email:<input type="text" name="correo" size="35" class="input js-email" placeholder="Ingresa tu correo electronico" required></p>
+                    <p>Dirección de la calle:<input type="text" name="calle" size="35" class="input js-dir" placeholder="Ingresa tu calle, numero, lt, mzn" required></p>
+                    <p>Código Postal:<input type="text" name="cp" maxlength="5" oninput="validarCP(this)" size="35" class="input js-cp"  placeholder="Ingresa tu codigo postal" required></p>
+                    <p>Teleéono de casa:<input type="text" maxlength="10" name="tel_casa" size="35" oninput="validarTel(this)" class="input js-tel" placeholder="Ingresa tu numero de casa" required></p>
+                    <p>Celular:<input type="text" maxlength="10" name="celular" size="35" class="input js-cel" oninput="validarCel(this)" placeholder="Ingresa tu telefono celular" required></p>
+                    <p>Email:<input type="text" name="correo" size="35" oninput="validarEmail(this)" class="input js-email" placeholder="Ingresa tu correo electronico" required></p>
 
             </fieldset>
 
@@ -118,14 +119,14 @@
                 <legend>Procedencia:</legend>
                 <p>Ingresa tu escuela de procedencia:
                 <span class="custom-select" >
-                    <select content="escuela">
-                        <option value="" disabled selected>Selecciona tu opcion</option>
+                    <select name="escuela_pro">
+                        <option value="" disabled selected>Selecciona tu opción</option>
                         <option value="Cecyt #1 Gonzalo Vázquez Vela">Cecyt #1 "Gonzalo Vázquez Vela"</option>
                         <option value="Cecyt #2 Miguel Bernard Perales">Cecyt #2 "Miguel Bernard Perales"</option>
-                        <option value="Cecyt #3 Estanislao Ramirez Ruíz">Cecyt #3 "Estanislao Ramirez Ruíz"</option>
+                        <option value="Cecyt #3 Estanislao Ramírez Ruíz">Cecyt #3 "Estanislao Ramirez Ruíz"</option>
                         <option value="Cecyt #4 Lázaro Cárdenas del Río">Cecyt #4 "Lázaro Cárdenas del Río"</option>
                         <option value="Cecyt #5 Benito Juárez">Cecyt #5 "Benito Juárez"</option>
-                        <option value="Cecyt #6 Miguel Othon de Mendizábal">Cecyt #6 "Miguel Othon de Mendizábal"</option>
+                        <option value="Cecyt #6 Miguel Othón de Mendizábal">Cecyt #6 "Miguel Othon de Mendizábal"</option>
                         <option value="Cecyt #7 Cuauhtémoc">Cecyt #7 "Cuauhtémoc"</option>
                         <option value="Cecyt #8 Narciso Bassols">Cecyt #8 "Narciso Bassols"</option>
                         <option value="Cecyt #9 Juan de Dios Bátiz Paredes">Cecyt #9 "Juan de Dios Bátiz Paredes"</option>
@@ -145,8 +146,8 @@
                 </span></p>
 
                 <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" >
-                    <select content="entidad_pro">
-                        <option value="" disabled selected>Selecciona tu opcion</option>
+                    <select name="entidad_pro">
+                        <option value="" disabled selected>Selecciona tu opción</option>
                             <option value="Aguascalientes">Aguascalientes</option>
                             <option value="Baja California">Baja California</option>
                             <option value="Baja California Sur">Baja California Sur</option>
@@ -185,14 +186,14 @@
                 <p> Promedio:
                 <input type="number"  id="prom" name="promedio" min="1" max="10" value="1" step="0.01" required/></p>
                 <div id="gen">
-                    <label for="genero">Escom fue tu:</label>
+                    <label for="genero">ESCOM fue tu:</label>
                     <span class="custom-select" >
-                        <select content="opcion">
-                            <option value="" disabled selected>Selecciona tu opcion</option>
-                            <option value="1Opcion">1ra Opción</option>
-                            <option value="2Opcion">2da Opción</option>
-                            <option value="3Opcion">3er Opción</option>
-                            <option value="4Opcion">4ta Opción</option>
+                        <select name="opcion">
+                            <option value="" disabled selected>Selecciona tu opción</option>
+                            <option value="1 Opción">1ra Opción</option>
+                            <option value="2 Opción">2da Opción</option>
+                            <option value="3 Opción">3er Opción</option>
+                            <option value="4 Opción">4ta Opción</option>
 
                         </select>
                     </span>
@@ -201,18 +202,20 @@
             </fieldset>
 
             <!-- Botones -->
-            <button type="button" btnMain js-enviar" style="float:left;">Enviar</button>
+            <button type="button" class="btnMain js-enviar" style="float:left;" >Enviar</button>
+            <button type="submit" class="js-submit" style="display: none;">Enviar</button>
             <button type="button" class="btnMain js-limpiar" style="float:right;">Limpiar</button>
+			
             <div class="clearfix"></div>
             
-            <!-- Inputs fantasma -->
+            <!-- Inputs fantasma 
             <input type="text" name="genero" id="genero" style="display: none">
             <input type="text" name="estado" id="genero" style="display: none">
             <input type="text" name="entidad_pro" id="genero" style="display: none">
-            <input type="text" name="Opcion" id="genero" style="display: none">
-            <button type="submit" nombre="Enviar" value="Submit" style="display: none">Enviar</button>
+            <input type="text" name="Opcion" id="genero" style="display: none">-->
+
         <!-- form global -->
-      </form>      
+    </form>          
     </div>
     <!-- footer -->
     <div class="footer">

@@ -31,8 +31,8 @@
 	$phpmailer->AddAddress($address_to); // recipients email
 	
 	$phpmailer->Subject = $the_subject;	
-	$phpmailer->Body .="<h1 style='color:Navy;'>Cita Exámen Diagnóstico</h1>";
-	$phpmailer->Body .="<p style='color:Navy;'>Gracias por proporcionarnos tus datos, aqui esta tienes el pdf con los datos de tu cita para examen diagnóstico</p>";
+	$phpmailer->Body .="<h1 style='color:Navy;'>Cita Examen Diagnóstico</h1>";
+	$phpmailer->Body .="<p style='color:Navy;'>Gracias por proporcionarnos tus datos, aqui tienes el pdf con los datos de tu cita para examen diagnóstico</p>";
 	$phpmailer->Body .="<p style='color:Navy;'>Saludos, gracias.</p>";
 	
 	$phpmailer->IsHTML(true);

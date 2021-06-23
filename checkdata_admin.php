@@ -27,13 +27,6 @@ echo '<!DOCTYPE html>
             <a href="https://www.escom.ipn.mx/" class="js-es">
             <img src="resources/img/escom.png" alt="escom-logo" class="logoimg">
         </span>
-        <span class="logo btnStudent">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-            width="260px" height="108" viewBox="0 0 140 110" style="position:absolute">
-            <polygon id="poliStudent" class="js-lstudent" points="50,0 0,100 150,100 200,0 " fill="#6C1D45" />
-            </svg>
-            <a href="#" class="js-student"><img src="resources/img/student.png" alt="alumno-logo" id="logoimg1"></a>
-        </span>
         <span class="logo btnAdmin">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
             width="260" height="108" viewBox="0 0 140 110" style="position:absolute">
@@ -48,10 +41,10 @@ echo '<!DOCTYPE html>
 	
     <div id="particles-js" class="fondoForm"></div>
     <div class="form">
-        <form action="./savedata.php">
+        <form action="./savedata_admin.php">
             <!-- identidad -->
             <fieldset>
-                <legend>Comprueba que tus datos sean correctos</legend>
+                <legend>Verifica que los datos sean correctos</legend>
 <br>';
 	session_start();
     $_SESSION["boleta"]= $_POST["numero_de_boleta"];

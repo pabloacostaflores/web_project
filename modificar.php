@@ -34,7 +34,7 @@ $Boleta2=$_GET["Boleta2"];
     <!-- header with buttons -->
     <header>
     <div class="header">
-<h1 class="centrar-texto fw-400">Modificacion de alumnos</h1>
+<h1 class="centrar-texto fw-400">Modificación de alumnos</h1>
     </div>
 </header>
     <!-- form -->
@@ -57,7 +57,7 @@ $Boleta2=$_GET["Boleta2"];
                 <p>Apellido Materno:<input type="text" name="apellido materno" size="35" class="input" placeholder="Ingresa tu apellido materno" value=<?php echo $datos['student_second_surname'] ?>></p>
                 <p>CURP:<input type="text" style="text-transform:uppercase;" name="curp " size="35" class="input" placeholder="Ingresa curp" value=<?php echo $datos['student_curp'] ?>></p>
                 <div id="gen">
-                    <label for="genero">Genero:</label>
+                    <label for="genero">Género:</label>
                     <span class="custom-select" style="width: 200px;">
                         <select name="genero" >
                             <option value="" disabled selected>Selecciona tu opcion</option>
@@ -68,8 +68,12 @@ $Boleta2=$_GET["Boleta2"];
                     </span>
                 </div>
                 <div id="nac">
+              
                     <label for="fechanacimiento">Fecha de nacimiento:</label>
-                    <input name="fecha" type="date" class="custom-date-field" value=<?php echo $datos['student_date_of_birth'] ?>/>
+                    <input name="fecha" type="date" class="custom-date-field" value=<?php $datosaux = $datos['student_date_of_birth'];
+                         $newDate =  date($datosaux);
+                         echo $newDate;
+                    ?>/>
                 </div>
             </fieldset>
             <!-- contacto -->
@@ -78,46 +82,46 @@ $Boleta2=$_GET["Boleta2"];
                 <legend>Contacto</legend>
                     <p style="width: 349px;">Estado:<span class="custom-select" style="width: 200px;">
                         <select name="student_state">
-                            <option value="" disabled selected>Selecciona tu opcion</option>
-                            <option value="AGU " <?php if($datos['student_state']=='AGU') echo 'selected="selected"';?>>Aguascalientes </option>
-                            <option value="BC " <?php if($datos['student_state']=='BC') echo 'selected="selected"';?>>Baja California </option>
-                            <option value="BCS " <?php if($datos['student_state']=='BCS') echo 'selected="selected"';?>>Baja California Sur </option>
-                            <option value="CAM " <?php if($datos['student_state']=='CAM') echo 'selected="selected"';?>>Campeche </option>
-                            <option value="CDMX" <?php if($datos['student_state']=='CDMX') echo 'selected="selected"';?>>Ciudad de México </option>
-                            <option value="COA " <?php if($datos['student_state']=='COA') echo 'selected="selected"';?>>Coahuila de Zaragoza </option>
-                            <option value="COM " <?php if($datos['student_state']=='COM') echo 'selected="selected"';?>>Colima </option>
-                            <option value="CHP " <?php if($datos['student_state']=='CHP') echo 'selected="selected"';?>>Chiapas </option>
-                            <option value="CHH " <?php if($datos['student_state']=='CHH') echo 'selected="selected"';?>>Chihuahua </option>
-                            <option value="DUR " <?php if($datos['student_state']=='DUR') echo 'selected="selected"';?>>Durango </option>
-                            <option value="MEX " <?php if($datos['student_state']=='MEX') echo 'selected="selected"';?>>student_state de México </option>
-                            <option value="GUA " <?php if($datos['student_state']=='GUA') echo 'selected="selected"';?>>Guanajuato </option>
-                            <option value="GUE " <?php if($datos['student_state']=='GUE') echo 'selected="selected"';?>>Guerrero </option>
-                            <option value="HID " <?php if($datos['student_state']=='HID') echo 'selected="selected"';?>>Hidalgo </option>
-                            <option value="JAL " <?php if($datos['student_state']=='JAL') echo 'selected="selected"';?>>Jalisco </option>
-                            <option value="MIC " <?php if($datos['student_state']=='MIC') echo 'selected="selected"';?>>Michoacán de Ocampo </option>
-                            <option value="MOR " <?php if($datos['student_state']=='MOR') echo 'selected="selected"';?>>Morelos </option>
-                            <option value="NAY " <?php if($datos['student_state']=='NAY') echo 'selected="selected"';?>>Nayarit </option>
-                            <option value="NL " <?php if($datos['student_state']=='NL') echo 'selected="selected"';?>>Nuevo León </option>
-                            <option value="OAX " <?php if($datos['student_state']=='OAX') echo 'selected="selected"';?>>Oaxaca </option>
-                            <option value="PUE " <?php if($datos['student_state']=='PUE') echo 'selected="selected"';?>>Puebla </option>
-                            <option value="QUE " <?php if($datos['student_state']=='QUE') echo 'selected="selected"';?>>Querétaro </option>
-                            <option value="QR " <?php if($datos['student_state']=='QR') echo 'selected="selected"';?>>Quintana Roo </option>
-                            <option value="SLP " <?php if($datos['student_state']=='SLP') echo 'selected="selected"';?>>San Luis Potosí </option>
-                            <option value="SIN " <?php if($datos['student_state']=='SIN') echo 'selected="selected"';?>>Sinaloa </option>
-                            <option value="SON " <?php if($datos['student_state']=='SON') echo 'selected="selected"';?>>Sonora </option>
-                            <option value="TAB " <?php if($datos['student_state']=='TAB') echo 'selected="selected"';?>>Tabasco </option>
-                            <option value="TAM " <?php if($datos['student_state']=='TAM') echo 'selected="selected"';?>>Tamaulipas </option>
-                            <option value="noexiste <?php if($datos['student_state']=='noexiste') echo 'selected="selected"';?>">Tlaxcala </option>
-                            <option value="VER " <?php if($datos['student_state']=='VER') echo 'selected="selected"';?>>Veracruz  </option>
-                            <option value="YUC " <?php if($datos['student_state']=='YUC') echo 'selected="selected"';?>>Yucatán </option>
-                            <option value="ZAC " <?php if($datos['student_state']=='ZAC') echo 'selected="selected"';?>>Zacatecas </option>
+                            <option value="" disabled selected>Selecciona tu opción</option>
+                            <option value="Aguascalientes" <?php if($datos['student_state']=='Aguascalientes') echo 'selected="selected"';?>>Aguascalientes </option>
+                            <option value="Baja California" <?php if($datos['student_state']=='Baja California') echo 'selected="selected"';?>>Baja California </option>
+                            <option value="Baja California Sur" <?php if($datos['student_state']=='BCS') echo 'selected="selected"';?>>Baja California Sur </option>
+                            <option value="Campeche" <?php if($datos['student_state']=='Campeche') echo 'selected="selected"';?>>Campeche </option>
+                            <option value="Ciudad de México" <?php if($datos['student_state']=='Ciudad de México') echo 'selected="selected"';?>>Ciudad de México </option>
+                            <option value="Coahuila de Zaragoza" <?php if($datos['student_state']=='Coahuila de Zaragoza') echo 'selected="selected"';?>>Coahuila de Zaragoza </option>
+                            <option value="Colima" <?php if($datos['student_state']=='Colima') echo 'selected="selected"';?>>Colima </option>
+                            <option value="Chiapas" <?php if($datos['student_state']=='Chiapas') echo 'selected="selected"';?>>Chiapas </option>
+                            <option value="Chihuahua" <?php if($datos['student_state']=='Chihuahua') echo 'selected="selected"';?>>Chihuahua </option>
+                            <option value="Durango" <?php if($datos['student_state']=='Durango') echo 'selected="selected"';?>>Durango </option>
+                            <option value="Estado de México" <?php if($datos['student_state']=='Estado de México') echo 'selected="selected"';?>>Estado de México </option>
+                            <option value="Guanajuato" <?php if($datos['student_state']=='Guanajuato') echo 'selected="selected"';?>>Guanajuato </option>
+                            <option value="Guerrero" <?php if($datos['student_state']=='Guerrero') echo 'selected="selected"';?>>Guerrero </option>
+                            <option value="Hidalgo" <?php if($datos['student_state']=='Hidalgo') echo 'selected="selected"';?>>Hidalgo </option>
+                            <option value="Jalisco" <?php if($datos['student_state']=='Jalisco') echo 'selected="selected"';?>>Jalisco </option>
+                            <option value="Michoacán de Ocampo" <?php if($datos['student_state']=='Michoacán de Ocampo') echo 'selected="selected"';?>>Michoacán de Ocampo </option>
+                            <option value="Morelos" <?php if($datos['student_state']=='Morelos') echo 'selected="selected"';?>>Morelos </option>
+                            <option value="Nayarit" <?php if($datos['student_state']=='Nayarit') echo 'selected="selected"';?>>Nayarit </option>
+                            <option value="Nuevo León" <?php if($datos['student_state']=='Nuevo León') echo 'selected="selected"';?>>Nuevo León </option>
+                            <option value="Oaxaca" <?php if($datos['student_state']=='Oaxaca') echo 'selected="selected"';?>>Oaxaca </option>
+                            <option value="Puebla" <?php if($datos['student_state']=='Puebla') echo 'selected="selected"';?>>Puebla </option>
+                            <option value="Querétaro" <?php if($datos['student_state']=='Querétaro') echo 'selected="selected"';?>>Querétaro </option>
+                            <option value="Quintana Roo" <?php if($datos['student_state']=='Quintana Roo') echo 'selected="selected"';?>>Quintana Roo </option>
+                            <option value="San Luis Potosí" <?php if($datos['student_state']=='San Luis Potosí') echo 'selected="selected"';?>>San Luis Potosí </option>
+                            <option value="Sinaloa" <?php if($datos['student_state']=='Sinaloa') echo 'selected="selected"';?>>Sinaloa </option>
+                            <option value="Sonora" <?php if($datos['student_state']=='Sonora') echo 'selected="selected"';?>>Sonora </option>
+                            <option value="Tabasco" <?php if($datos['student_state']=='Tabasco') echo 'selected="selected"';?>>Tabasco </option>
+                            <option value="Tamaulipas" <?php if($datos['student_state']=='Tamaulipas') echo 'selected="selected"';?>>Tamaulipas </option>
+                            <option value="Tlaxcala" <?php if($datos['student_state']=='Tlaxcala') echo 'selected="selected"';?>">Tlaxcala </option>
+                            <option value="Veracruz" <?php if($datos['student_state']=='Veracruz') echo 'selected="selected"';?>>Veracruz  </option>
+                            <option value="Yucatán" <?php if($datos['student_state']=='Yucatán') echo 'selected="selected"';?>>Yucatán </option>
+                            <option value="Zacatecas" <?php if($datos['student_state']=='Zacatecas') echo 'selected="selected"';?>>Zacatecas </option>
                         </select>
                     </span></p>
-                    <p>Delegacion/Municipio:<input type="text" name="Delegacion" size="35" class="input" placeholder="Ingresa tu Delegacion/Municipio" value=<?php echo $datos['student_municipality'] ?>></p>
+                    <p>Delegación/Municipio:<input type="text" name="Delegacion" size="35" class="input" placeholder="Ingresa tu Delegacion/Municipio" value=<?php echo $datos['student_municipality'] ?>></p>
                     <p>Colonia:<input type="text" name="Col" size="35" class="input" placeholder="Ingresa tu colonia" value=<?php echo $datos['student_neighborhood'] ?>></p>
-                    <p>Direccion de la calle:<input type="text" name="Calle" size="35" class="input" placeholder="Ingresa tu calle, numero, lt, mzn" value=<?php echo $datos['student_street'] ?>></p>
-                    <p>Codigo Postal:<input type="text" name="cp" size="35" class="input" placeholder="Ingresa tu codigo postal" value=<?php echo $datos['student_postal_code'] ?>></p>
-                    <p>Telefono de casa:<input type="text" name="tel" size="35" class="input" placeholder="Ingresa tu numero de casa" value=<?php echo $datos['student_home_phone'] ?>></p>
+                    <p>Dirección de la calle:<input type="text" name="Calle" size="35" class="input" placeholder="Ingresa tu calle, numero, lt, mzn" value=<?php echo $datos['student_street'] ?>></p>
+                    <p>Código Postal:<input type="text" name="cp" size="35" class="input" placeholder="Ingresa tu codigo postal" value=<?php echo $datos['student_postal_code'] ?>></p>
+                    <p>Teléfono de casa:<input type="text" name="tel" size="35" class="input" placeholder="Ingresa tu numero de casa" value=<?php echo $datos['student_home_phone'] ?>></p>
                     <p>Celular:<input type="text" name="cel" size="35" class="input" placeholder="Ingresa tu telefono celular" value=<?php echo $datos['student_phone_number'] ?>></p>
                     <p>Email:<input type="text" name="correo" size="35" class="input" placeholder="Ingresa tu correo electronico" value=<?php echo $datos['student_email'] ?>></p>
     
@@ -130,80 +134,80 @@ $Boleta2=$_GET["Boleta2"];
                 <p>Ingresa tu escuela de procedencia: 
                 <span class="custom-select" style="width: 200px;">
                     <select name="Escuela">
-                        <option value="" disabled selected>Selecciona tu opcion</option>
-                        <option value="cecyt1" <?php if($datos['student_school_of_origin']=='cecyt1') echo 'selected="selected"';?>>Cecyt #1 "Gonzalo Vázquez Vela"</option>
-                        <option value="cecyt2" <?php if($datos['student_school_of_origin']=='cecyt2') echo 'selected="selected"';?>>Cecyt #2 "Miguel Bernard Perales"</option>
-                        <option value="cecyt3" <?php if($datos['student_school_of_origin']=='cecyt3') echo 'selected="selected"';?>>Cecyt #3 "Estanislao Ramirez Ruíz"</option>
-                        <option value="cecyt4" <?php if($datos['student_school_of_origin']=='cecyt4') echo 'selected="selected"';?>>Cecyt #4 "Lázaro Cárdenas del Río"</option>
-                        <option value="cecyt5" <?php if($datos['student_school_of_origin']=='cecyt5') echo 'selected="selected"';?>>Cecyt #5 "Benito Juárez"</option>
-                        <option value="cecyt6" <?php if($datos['student_school_of_origin']=='cecyt6') echo 'selected="selected"';?>>Cecyt #6 "Miguel Othon de Mendizábal"</option>
-                        <option value="cecyt7" <?php if($datos['student_school_of_origin']=='cecyt7') echo 'selected="selected"';?>>Cecyt #7 "Cuauhtémoc"</option>
-                        <option value="cecyt8" <?php if($datos['student_school_of_origin']=='cecyt8') echo 'selected="selected"';?>>Cecyt #8 "Narciso Bassols"</option>
-                        <option value="cecyt9" <?php if($datos['student_school_of_origin']=='cecyt9') echo 'selected="selected"';?>>Cecyt #9 "Juan de Dios Bátiz Paredes"</option>
-                        <option value="cecyt10" <?php if($datos['student_school_of_origin']=='cecyt10') echo 'selected="selected"';?>>Cecyt #10 "Carlos Vallejo Márquez"</option>
-                        <option value="cecyt11" <?php if($datos['student_school_of_origin']=='cecyt11') echo 'selected="selected"';?>>Cecyt #11 "Wilfrido Massieu"</option>
-                        <option value="cecyt12" <?php if($datos['student_school_of_origin']=='cecyt12') echo 'selected="selected"';?>>Cecyt #12 "José María Morelos"</option>
-                        <option value="cecyt13" <?php if($datos['student_school_of_origin']=='cecyt13') echo 'selected="selected"';?>>Cecyt #13 "Ricardo Flores Magón"</option>
-                        <option value="cecyt14" <?php if($datos['student_school_of_origin']=='cecyt14') echo 'selected="selected"';?>>Cecyt #14 "Luis Enrique Erro Soler"</option>
-                        <option value="cecyt15" <?php if($datos['student_school_of_origin']=='cecyt15') echo 'selected="selected"';?>>Cecyt #15 "Diódoro Antúnez Echegaray"</option>
-                        <option value="cecyt16" <?php if($datos['student_school_of_origin']=='cecyt16') echo 'selected="selected"';?>>Cecyt #16 "Hidalgo"</option>
-                        <option value="cecyt17" <?php if($datos['student_school_of_origin']=='cecyt17') echo 'selected="selected"';?>>Cecyt #17 "León, Guanajuato"</option>
-                        <option value="cecyt18" <?php if($datos['student_school_of_origin']=='cecyt18') echo 'selected="selected"';?>>Cecyt #18 "Zacatecas"</option>
-                        <option value="cecyt19" <?php if($datos['student_school_of_origin']=='cecyt19') echo 'selected="selected"';?>>Cecyt #19 "Leona Vicario"</option>
-                        <option value="cet1 " <?php if($datos['student_school_of_origin']=='cet1') echo 'selected="selected"';?>>CET 1 "Walter Cross Buchanan"</option>
-                        <option value="otro " <?php if($datos['student_school_of_origin']=='otro') echo 'selected="selected"';?>>Otro </option>
+                        <option value="" disabled selected>Selecciona tu opción</option>
+                        <option value="Cecyt #1 Gonzalo Vázquez Vela" <?php if($datos['student_school_of_origin']=='Cecyt #1 Gonzalo Vázquez Vela') echo 'selected="selected"';?>>Cecyt #1 "Gonzalo Vázquez Vela"</option>
+                        <option value="Cecyt #2 Miguel Bernard Perales" <?php if($datos['student_school_of_origin']=='Cecyt #2 Miguel Bernard Perales') echo 'selected="selected"';?>>Cecyt #2 "Miguel Bernard Perales"</option>
+                        <option value="Cecyt #3 Estanislao Ramírez Ruíz" <?php if($datos['student_school_of_origin']=='Cecyt #3 Estanislao Ramírez Ruíz') echo 'selected="selected"';?>>Cecyt #3 "Estanislao Ramirez Ruíz"</option>
+                        <option value="Cecyt #4 Lázaro Cárdenas del Río" <?php if($datos['student_school_of_origin']=='Cecyt #4 Lázaro Cárdenas del Río') echo 'selected="selected"';?>>Cecyt #4 "Lázaro Cárdenas del Río"</option>
+                        <option value="Cecyt #5 Benito Juárez" <?php if($datos['student_school_of_origin']=='Cecyt #5 Benito Juárez') echo 'selected="selected"';?>>Cecyt #5 "Benito Juárez"</option>
+                        <option value="Cecyt #6 Miguel Othón de Mendizábal" <?php if($datos['student_school_of_origin']=='Cecyt #6 Miguel Othón de Mendizábal') echo 'selected="selected"';?>>Cecyt #6 "Miguel Othon de Mendizábal"</option>
+                        <option value="Cecyt #7 Cuauhtémoc" <?php if($datos['student_school_of_origin']=='Cecyt #7 Cuauhtémoc') echo 'selected="selected"';?>>Cecyt #7 "Cuauhtémoc"</option>
+                        <option value="Cecyt #8 Narciso Bassols" <?php if($datos['student_school_of_origin']=='Cecyt #8 Narciso Bassols') echo 'selected="selected"';?>>Cecyt #8 "Narciso Bassols"</option>
+                        <option value="Cecyt #9 Juan de Dios Bátiz Paredes" <?php if($datos['student_school_of_origin']=='cecytCecyt #9 Juan de Dios Bátiz Paredes9') echo 'selected="selected"';?>>Cecyt #9 "Juan de Dios Bátiz Paredes"</option>
+                        <option value="Cecyt #10 Carlos Vallejo Márquez" <?php if($datos['student_school_of_origin']=='Cecyt #10 Carlos Vallejo Márquez') echo 'selected="selected"';?>>Cecyt #10 "Carlos Vallejo Márquez"</option>
+                        <option value="Cecyt #11 Wilfrido Massieu" <?php if($datos['student_school_of_origin']=='Cecyt #11 Wilfrido Massieu') echo 'selected="selected"';?>>Cecyt #11 "Wilfrido Massieu"</option>
+                        <option value="Cecyt #12 José María Morelos" <?php if($datos['student_school_of_origin']=='Cecyt #12 José María Morelos') echo 'selected="selected"';?>>Cecyt #12 "José María Morelos"</option>
+                        <option value="Cecyt #13 Ricardo Flores Magón" <?php if($datos['student_school_of_origin']=='Cecyt #13 Ricardo Flores Magón') echo 'selected="selected"';?>>Cecyt #13 "Ricardo Flores Magón"</option>
+                        <option value="Cecyt #14 Luis Enrique Erro Soler" <?php if($datos['student_school_of_origin']=='Cecyt #14 Luis Enrique Erro Soler') echo 'selected="selected"';?>>Cecyt #14 "Luis Enrique Erro Soler"</option>
+                        <option value="Cecyt #15 Diódoro Antúnez Echegaray" <?php if($datos['student_school_of_origin']=='Cecyt #15 Diódoro Antúnez Echegaray') echo 'selected="selected"';?>>Cecyt #15 "Diódoro Antúnez Echegaray"</option>
+                        <option value="Cecyt #16 Hidalgo" <?php if($datos['student_school_of_origin']=='Cecyt #16 Hidalgo') echo 'selected="selected"';?>>Cecyt #16 "Hidalgo"</option>
+                        <option value="Cecyt #17 León, Guanajuato" <?php if($datos['student_school_of_origin']=='Cecyt #17 León, Guanajuato') echo 'selected="selected"';?>>Cecyt #17 "León, Guanajuato"</option>
+                        <option value="Cecyt #18 Zacatecas" <?php if($datos['student_school_of_origin']=='Cecyt #18 Zacatecas') echo 'selected="selected"';?>>Cecyt #18 "Zacatecas"</option>
+                        <option value="Cecyt #19 Leona Vicario" <?php if($datos['student_school_of_origin']=='Cecyt #19 Leona Vicario') echo 'selected="selected"';?>>Cecyt #19 "Leona Vicario"</option>
+                        <option value="CET 1 Walter Cross Buchanan" <?php if($datos['student_school_of_origin']=='CET 1 Walter Cross Buchanan') echo 'selected="selected"';?>>CET 1 "Walter Cross Buchanan"</option>
+                        <option value="Otro " <?php if($datos['student_school_of_origin']=='Otro') echo 'selected="selected"';?>>Otro </option>
                     </select>
                 </span></p>
 
                 <p>Ingresa tu entidad federativa de procedencia:<span class="custom-select" style="width: 200px;">
                     <select name="E_proc">
-                    <option value="" disabled selected>Selecciona tu opcion</option>
-                            <option value="AGU " <?php if($datos['student_state_of_origin']=='AGU') echo 'selected="selected"';?>>Aguascalientes </option>
-                            <option value="BC " <?php if($datos['student_state_of_origin']=='BC') echo 'selected="selected"';?>>Baja California </option>
-                            <option value="BCS " <?php if($datos['student_state_of_origin']=='BCS') echo 'selected="selected"';?>>Baja California Sur </option>
-                            <option value="CAM " <?php if($datos['student_state_of_origin']=='CAM') echo 'selected="selected"';?>>Campeche </option>
-                            <option value="CDMX" <?php if($datos['student_state_of_origin']=='CDMX') echo 'selected="selected"';?>>Ciudad de México </option>
-                            <option value="COA " <?php if($datos['student_state_of_origin']=='COA') echo 'selected="selected"';?>>Coahuila de Zaragoza </option>
-                            <option value="COM " <?php if($datos['student_state_of_origin']=='COM') echo 'selected="selected"';?>>Colima </option>
-                            <option value="CHP " <?php if($datos['student_state_of_origin']=='CHP') echo 'selected="selected"';?>>Chiapas </option>
-                            <option value="CHH " <?php if($datos['student_state_of_origin']=='CHH') echo 'selected="selected"';?>>Chihuahua </option>
-                            <option value="DUR " <?php if($datos['student_state_of_origin']=='DUR') echo 'selected="selected"';?>>Durango </option>
-                            <option value="MEX " <?php if($datos['student_state_of_origin']=='MEX') echo 'selected="selected"';?>>Estado de México </option>
-                            <option value="GUA " <?php if($datos['student_state_of_origin']=='GUA') echo 'selected="selected"';?>>Guanajuato </option>
-                            <option value="GUE " <?php if($datos['student_state_of_origin']=='GUE') echo 'selected="selected"';?>>Guerrero </option>
-                            <option value="HID " <?php if($datos['student_state_of_origin']=='HID') echo 'selected="selected"';?>>Hidalgo </option>
-                            <option value="JAL " <?php if($datos['student_state_of_origin']=='JAL') echo 'selected="selected"';?>>Jalisco </option>
-                            <option value="MIC " <?php if($datos['student_state_of_origin']=='MIC') echo 'selected="selected"';?>>Michoacán de Ocampo </option>
-                            <option value="MOR " <?php if($datos['student_state_of_origin']=='MOR') echo 'selected="selected"';?>>Morelos </option>
-                            <option value="NAY " <?php if($datos['student_state_of_origin']=='NAY') echo 'selected="selected"';?>>Nayarit </option>
-                            <option value="NL " <?php if($datos['student_state_of_origin']=='NL') echo 'selected="selected"';?>>Nuevo León </option>
-                            <option value="OAX " <?php if($datos['student_state_of_origin']=='OAX') echo 'selected="selected"';?>>Oaxaca </option>
-                            <option value="PUE " <?php if($datos['student_state_of_origin']=='PUE') echo 'selected="selected"';?>>Puebla </option>
-                            <option value="QUE " <?php if($datos['student_state_of_origin']=='QUE') echo 'selected="selected"';?>>Querétaro </option>
-                            <option value="QR " <?php if($datos['student_state_of_origin']=='QR') echo 'selected="selected"';?>>Quintana Roo </option>
-                            <option value="SLP " <?php if($datos['student_state_of_origin']=='SLP') echo 'selected="selected"';?>>San Luis Potosí </option>
-                            <option value="SIN " <?php if($datos['student_state_of_origin']=='SIN') echo 'selected="selected"';?>>Sinaloa </option>
-                            <option value="SON " <?php if($datos['student_state_of_origin']=='SON') echo 'selected="selected"';?>>Sonora </option>
-                            <option value="TAB " <?php if($datos['student_state_of_origin']=='TAB') echo 'selected="selected"';?>>Tabasco </option>
-                            <option value="TAM " <?php if($datos['student_state_of_origin']=='TAM') echo 'selected="selected"';?>>Tamaulipas </option>
-                            <option value="noexiste <?php if($datos['student_state_of_origin']=='noexiste') echo 'selected="selected"';?>">Tlaxcala </option>
-                            <option value="VER " <?php if($datos['student_state_of_origin']=='VER') echo 'selected="selected"';?>>Veracruz  </option>
-                            <option value="YUC " <?php if($datos['student_state_of_origin']=='YUC') echo 'selected="selected"';?>>Yucatán </option>
-                            <option value="ZAC " <?php if($datos['student_state_of_origin']=='ZAC') echo 'selected="selected"';?>>Zacatecas </option>
+                    <option value="" disabled selected>Selecciona tu opción</option>
+                            <option value="Aguascalientes" <?php if($datos['student_state_of_origin']=='Aguascalientes') echo 'selected="selected"';?>>Aguascalientes </option>
+                            <option value="Baja California" <?php if($datos['student_state_of_origin']=='Baja California') echo 'selected="selected"';?>>Baja California </option>
+                            <option value="Baja California Sur" <?php if($datos['student_state_of_origin']=='BCS') echo 'selected="selected"';?>>Baja California Sur </option>
+                            <option value="Campeche" <?php if($datos['student_state_of_origin']=='Campeche') echo 'selected="selected"';?>>Campeche </option>
+                            <option value="Ciudad de México" <?php if($datos['student_state_of_origin']=='Ciudad de México') echo 'selected="selected"';?>>Ciudad de México </option>
+                            <option value="Coahuila de Zaragoza" <?php if($datos['student_state_of_origin']=='Coahuila de Zaragoza') echo 'selected="selected"';?>>Coahuila de Zaragoza </option>
+                            <option value="Colima" <?php if($datos['student_state_of_origin']=='Colima') echo 'selected="selected"';?>>Colima </option>
+                            <option value="Chiapas" <?php if($datos['student_state_of_origin']=='Chiapas') echo 'selected="selected"';?>>Chiapas </option>
+                            <option value="Chihuahua" <?php if($datos['student_state_of_origin']=='Chihuahua') echo 'selected="selected"';?>>Chihuahua </option>
+                            <option value="Durango" <?php if($datos['student_state_of_origin']=='Durango') echo 'selected="selected"';?>>Durango </option>
+                            <option value="Estado de México" <?php if($datos['student_state_of_origin']=='Estado de México') echo 'selected="selected"';?>>Estado de México </option>
+                            <option value="Guanajuato" <?php if($datos['student_state_of_origin']=='Guanajuato') echo 'selected="selected"';?>>Guanajuato </option>
+                            <option value="Guerrero" <?php if($datos['student_state_of_origin']=='Guerrero') echo 'selected="selected"';?>>Guerrero </option>
+                            <option value="Hidalgo" <?php if($datos['student_state_of_origin']=='Hidalgo') echo 'selected="selected"';?>>Hidalgo </option>
+                            <option value="Jalisco" <?php if($datos['student_state_of_origin']=='Jalisco') echo 'selected="selected"';?>>Jalisco </option>
+                            <option value="Michoacán de Ocampo" <?php if($datos['student_state_of_origin']=='Michoacán de Ocampo') echo 'selected="selected"';?>>Michoacán de Ocampo </option>
+                            <option value="Morelos" <?php if($datos['student_state_of_origin']=='Morelos') echo 'selected="selected"';?>>Morelos </option>
+                            <option value="Nayarit" <?php if($datos['student_state_of_origin']=='Nayarit') echo 'selected="selected"';?>>Nayarit </option>
+                            <option value="Nuevo León" <?php if($datos['student_state_of_origin']=='Nuevo León') echo 'selected="selected"';?>>Nuevo León </option>
+                            <option value="Oaxaca" <?php if($datos['student_state_of_origin']=='Oaxaca') echo 'selected="selected"';?>>Oaxaca </option>
+                            <option value="Puebla" <?php if($datos['student_state_of_origin']=='Puebla') echo 'selected="selected"';?>>Puebla </option>
+                            <option value="Querétaro" <?php if($datos['student_state_of_origin']=='Querétaro') echo 'selected="selected"';?>>Querétaro </option>
+                            <option value="Quintana Roo" <?php if($datos['student_state_of_origin']=='Quintana Roo') echo 'selected="selected"';?>>Quintana Roo </option>
+                            <option value="San Luis Potosí" <?php if($datos['stustudent_state_of_origindent_state']=='San Luis Potosí') echo 'selected="selected"';?>>San Luis Potosí </option>
+                            <option value="Sinaloa" <?php if($datos['student_state_of_origin']=='Sinaloa') echo 'selected="selected"';?>>Sinaloa </option>
+                            <option value="Sonora" <?php if($datos['student_state_of_origin']=='Sonora') echo 'selected="selected"';?>>Sonora </option>
+                            <option value="Tabasco" <?php if($datos['student_state_of_origin']=='Tabasco') echo 'selected="selected"';?>>Tabasco </option>
+                            <option value="Tamaulipas" <?php if($datos['student_state_of_origin']=='Tamaulipas') echo 'selected="selected"';?>>Tamaulipas </option>
+                            <option value="Tlaxcala" <?php if($datos['student_state_of_origin']=='Tlaxcala') echo 'selected="selected"';?>">Tlaxcala </option>
+                            <option value="Veracruz" <?php if($datos['student_state_of_origin']=='Yucatán') echo 'selected="selected"';?>>Veracruz  </option>
+                            <option value="Yucatán" <?php if($datos['student_state_of_origin']=='Yucatán') echo 'selected="selected"';?>>Yucatán </option>
+                            <option value="Zacatecas" <?php if($datos['student_state_of_origin']=='Zacatecas') echo 'selected="selected"';?>>Zacatecas </option>
                     </select>
                 </span></p>
                 
                 <p> Promedio: 
-                <input type="number"  id="prom" name="Promedio" min="1" max="10" value="1" step="0.01" value=<?php echo $datos['student_final_grade'] ?>/></p>
+                <input type="number"  id="prom" name="Promedio" min="1" max="10" step="0.01" value=<?php echo $datos['student_final_grade'];?>></p>
                 <div id="gen">
-                    <label for="genero">Escom fue tu:</label>
+                    <label for="genero">ESCOM fue tu:</label>
                     <span class="custom-select" style="width: 200px;">
                         <select name="opcion">
                             <option value="" disabled selected>Selecciona tu opcion</option>
-                            <option value="1Opcion">1ra Opción</option>
-                            <option value="2Opcion">2da Opción</option>
-                            <option value="3Opcion">3er Opción</option>
-                            <option value="4Opcion">4ta Opción</option>
+                            <option value="1 Opción" <?php if($datos['student_escom_order']=='1 Opción') echo 'selected="selected"';?>>1ra Opción</option>
+                            <option value="2 Opción" <?php if($datos['student_escom_order']=='2 Opción') echo 'selected="selected"';?>>2da Opción</option>
+                            <option value="3 Opción" <?php if($datos['student_escom_order']=='3 Opción') echo 'selected="selected"';?>>3er Opción</option>
+                            <option value="4 Opción" <?php if($datos['student_escom_order']=='4 Opción') echo 'selected="selected"';?>>4ta Opción</option>
                             
                         </select>
                     </span>
@@ -215,28 +219,36 @@ $Boleta2=$_GET["Boleta2"];
             <button class="btnMain js-enviar" style="float:left;" formaction="crud.php#modificar" onclick="Update()">Enviar</button>
             <script>
                 function Update(){
-                    <?php $aux=1?>
-                    $boleta_aux=$_POST['numero_de_boleta']
-                    $nombre=$_POST['nombre']
-                    $ap=$_POST['apellido_paterno']
-                    $am=$_POST['apellido_materno']
-                    $curp=$_POST['curp']
-                    $genero_1=$_POST['genero']
-                    $fecha=$_POST['fecha']
-                    $estado=$_POST['Estado']
-                    $Delegacion=$_POST['Delegacion']
-                    $Col=$_POST['Col']
-                    $Dir=$_POST['Calle']
-                    $cp=$_POST['cp']
-                    $tel=$_POST['tel']
-                    $cel=$_POST['cel']
-                    $correo=$_POST['correo']
-                    $Escuela=$_POST['Escuela']
-                    $E_proc=$_POST['E_proc']
-                    $Promedio=$_POST['Promedio']
-                    $opcion=$_POST['opcion']
+                    <?php $aux=1;
+                   
+                    if($aux == 1){
+                    $student_id=$_POST['numero_de_boleta'];
+                    $student_name=$_POST['nombre'];
+                    $student_first_surname=$_POST['apellido_paterno'];
+                    $student_second_surname=$_POST['apellido_materno'];
+                    $student_curp=$_POST['curp'];
+                    $student_date_of_birth=$_POST['fecha'];
+                    $student_gender=$_POST['genero'];
+                    $student_state=$_POST['Estado'];
+                    $student_municipality=$_POST['Delegacion'];
+                    $student_neighborhood=$_POST['Col'];
+                    $student_street=$_POST['Calle'];
+                    $student_postal_code=$_POST['cp'];
+                    $student_home_phone=$_POST['tel'];
+                    $student_phone_number=$_POST['cel'];
+                    $student_email=$_POST['correo'];
+                    $student_school_of_origin=$_POST['Escuela'];
+                    $student_state_of_origin=$_POST['E_proc'];
+                    $student_final_grade=$_POST['Promedio'];
+                    $student_escom_order=$_POST['opcion'];
+                   
+                    $query_lo = mysqli_query($conn,"UPDATE students SET student_id='".$student_id."', student_name='".$student_name."', student_first_surname='".$student_first_surname."', student_second_surname='".$student_second_surname."', student_curp='".$student_curp."', student_date_of_birth='".$student_date_of_birth."', student_gender='".$student_gender."', student_state='".$student_state."', student_municipality='".$student_municipality."', student_neighborhood='".$student_neighborhood."', student_street='".$student_street."', student_postal_code='".$student_postal_code."', student_home_phone='".$student_home_phone."', student_phone_number='".$student_phone_number."', student_email='".$student_email."', student_school_of_origin='".$student_school_of_origin."', student_state_of_origin='".$student_state_of_origin."', student_final_grade='".$student_final_grade."', student_escom_order='".$student_escom_order."' WHERE student_id='".$student_id."'");
 
-                }
+
+    
+                     }
+                    ?>
+                         
             </script>
   
             <button class="btnMain js-limpiar" style="float:right;" formaction="crud.php#modificar">Volver</button>
